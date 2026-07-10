@@ -1,14 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipame - The Social Media Clipping Industry Directory</title>
+  <meta name="description" content="Clipame is the definitive directory for the social media clipping industry. Find clippers, agencies, tools, communities, and job opportunities all in one place.">
+  <meta name="keywords" content="clipping directory, social media clippers, video editors, short form content, clipping agencies, TikTok editors, YouTube Shorts, Instagram Reels">
+  <meta property="og:title" content="Clipame - The Social Media Clipping Industry Directory">
+  <meta property="og:description" content="Find clippers, agencies, tools, and opportunities. The trusted directory for the social media clipping economy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clipame.com">
+  <link rel="canonical" href="https://clipame.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
-    <p>Your content goes here.</p>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">clip<span>ame</span></a>
+      <nav class="nav">
+        <a href="clippers.html" class="nav__link">Clippers</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="tools.html" class="nav__link">Tools</a>
+        <a href="communities.html" class="nav__link">Communities</a>
+        <a href="jobs.html" class="nav__link">Jobs</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List Your Profile</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <p class="label">The Clipping Industry Directory</p>
+        <h1>Find the people behind the clips.</h1>
+        <p class="hero__tagline">Clipame connects creators, clippers, agencies, and tools in one searchable directory. The trusted source for the social media clipping economy.</p>
+        <div class="search-bar mb-32">
+          <input type="text" placeholder="Search clippers, agencies, tools, jobs...">
+          <button class="btn btn--primary">Search</button>
+        </div>
+        <div class="hero__actions">
+          <a href="clippers.html" class="btn btn--white">Browse Directory</a>
+          <a href="#submit" class="btn btn--ghost" data-modal="#submitModal">Get Listed</a>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-number">6</div>
+          <div class="hero__stat-label">Directory Categories</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">100+</div>
+          <div class="hero__stat-label">Agencies Tracked</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">70K+</div>
+          <div class="hero__stat-label">Clippers Worldwide</div>
+        </div>
+        <div>
+          <div class="hero__stat-number">5</div>
+          <div class="hero__stat-label">Platforms Covered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-48">
+        <p class="label">Explore the Directory</p>
+        <h2>Everything in the Clipping Ecosystem</h2>
+        <p class="section-subtitle">From freelance editors to enterprise distribution networks, Clipame indexes the entire social media clipping industry.</p>
+      </div>
+      <div class="categories-grid">
+
+        <a href="clippers.html" class="category-card">
+          <div class="category-card__icon">&#9998;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Clippers</h3>
+          <p>Freelance video editors, short-form specialists, AI editors, and niche experts available for hire.</p>
+          <span class="category-card__count">Browse Clippers</span>
+        </a>
+
+        <a href="agencies.html" class="category-card">
+          <div class="category-card__icon">&#9879;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Agencies</h3>
+          <p>Clipping agencies, creator management companies, and content distribution networks.</p>
+          <span class="category-card__count">Browse Agencies</span>
+        </a>
+
+        <a href="tools.html" class="category-card">
+          <div class="category-card__icon">&#9881;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Software &amp; Tools</h3>
+          <p>AI clipping software, editing tools, caption generators, analytics, and scheduling platforms.</p>
+          <span class="category-card__count">Browse Tools</span>
+        </a>
+
+        <a href="communities.html" class="category-card">
+          <div class="category-card__icon">&#9734;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Communities</h3>
+          <p>Discord servers, Whop groups, Reddit communities, and Telegram channels for clippers.</p>
+          <span class="category-card__count">Browse Communities</span>
+        </a>
+
+        <a href="jobs.html" class="category-card">
+          <div class="category-card__icon">&#9733;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Jobs &amp; Campaigns</h3>
+          <p>Paid clipping campaigns, freelance gigs, full-time positions, and performance-based opportunities.</p>
+          <span class="category-card__count">Browse Jobs</span>
+        </a>
+
+        <a href="about.html#learn" class="category-card">
+          <div class="category-card__icon">&#9776;</div>
+          <span class="category-card__arrow">&rarr;</span>
+          <h3>Learning Center</h3>
+          <p>Guides, tutorials, and resources for beginners and experienced clippers looking to level up.</p>
+          <span class="category-card__count">Start Learning</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center mb-48">
+        <p class="label">How It Works</p>
+        <h2>Connect. Clip. Grow.</h2>
+        <p class="section-subtitle">Whether you create content or edit it, Clipame helps you find the right people and opportunities.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Search the Directory</h3>
+          <p>Browse clippers by specialty, location, availability, and verified portfolio results.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Compare &amp; Connect</h3>
+          <p>Review profiles, portfolios, ratings, and client testimonials to find the right fit.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Hire or Get Hired</h3>
+          <p>Reach out directly, post campaigns, or apply to open positions through the jobs board.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">4</div>
+          <h3>Grow Together</h3>
+          <p>Build long-term relationships, track results, and scale your content operation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CLIPPERS PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-48">
+        <p class="label">Featured Listings</p>
+        <h2>Top Clippers &amp; Agencies</h2>
+        <p class="section-subtitle">Verified professionals and agencies making an impact across the clipping ecosystem.</p>
+      </div>
+      <div class="listings-grid">
+
+        <div class="listing-card">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar">JM</div>
+            <div>
+              <div class="listing-card__name">Jordan Mitchell</div>
+              <div class="listing-card__role">Podcast Clipper &middot; Los Angeles, CA</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Podcast</span>
+            <span class="tag tag--navy">Finance</span>
+            <span class="tag">Premiere Pro</span>
+            <span class="tag">CapCut</span>
+          </div>
+          <div class="listing-card__stats">
+            <span><strong>12M+</strong> views</span>
+            <span><strong>800+</strong> clips</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--green">Available for Work</span>
+            <a href="clippers.html" class="btn btn--outline btn--sm">View Profile</a>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar">SK</div>
+            <div>
+              <div class="listing-card__name">Sarah Kim</div>
+              <div class="listing-card__role">Gaming Editor &middot; Seoul, KR</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Gaming</span>
+            <span class="tag tag--navy">Esports</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">AI Tools</span>
+          </div>
+          <div class="listing-card__stats">
+            <span><strong>45M+</strong> views</span>
+            <span><strong>2,400+</strong> clips</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--blue">Agency Member</span>
+            <a href="clippers.html" class="btn btn--outline btn--sm">View Profile</a>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar">CA</div>
+            <div>
+              <div class="listing-card__name">Clipping Agency</div>
+              <div class="listing-card__role">Full-Service Agency &middot; United States</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Agency</span>
+            <span class="tag tag--navy">Distribution</span>
+            <span class="tag">1,000+ Creators</span>
+          </div>
+          <div class="listing-card__stats">
+            <span><strong>10B+</strong> views</span>
+            <span><strong>1,000+</strong> creators</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">Verified Agency</span>
+            <a href="agencies.html" class="btn btn--outline btn--sm">View Profile</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-32">
+        <a href="clippers.html" class="btn btn--outline">View All Listings &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY STATS -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center mb-48">
+        <p class="label">The Clipping Economy</p>
+        <h2>A Rapidly Growing Industry</h2>
+        <p class="section-subtitle">Short-form video transformed content distribution. The clipping industry powers the creator economy.</p>
+      </div>
+      <div class="stats-row">
+        <div>
+          <div class="stat__number">$250B+</div>
+          <div class="stat__label">Creator Economy Value</div>
+        </div>
+        <div>
+          <div class="stat__number">70K+</div>
+          <div class="stat__label">Active Clippers Worldwide</div>
+        </div>
+        <div>
+          <div class="stat__number">100+</div>
+          <div class="stat__label">Clipping Agencies</div>
+        </div>
+        <div>
+          <div class="stat__number">5</div>
+          <div class="stat__label">Major Short-Form Platforms</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR CREATORS / FOR CLIPPERS -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;">
+        <div style="padding:40px;border:1px solid var(--gray-200);border-radius:var(--radius-lg);">
+          <p class="label">For Creators</p>
+          <h3 class="mb-16">Find Your Clipping Team</h3>
+          <p style="color:var(--gray-500);margin-bottom:24px;">Podcasters, YouTubers, streamers, and influencers use Clipame to discover vetted clippers and agencies who understand their voice, audience, and content style.</p>
+          <ul style="color:var(--gray-600);font-size:0.9375rem;">
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Search clippers by niche and specialty</li>
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Review portfolios and verified results</li>
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Compare agencies side by side</li>
+            <li style="padding:8px 0;">Post campaigns and hiring opportunities</li>
+          </ul>
+          <a href="clippers.html" class="btn btn--primary mt-24">Find Clippers</a>
+        </div>
+        <div style="padding:40px;border:1px solid var(--gray-200);border-radius:var(--radius-lg);">
+          <p class="label">For Clippers</p>
+          <h3 class="mb-16">Get Discovered &amp; Get Hired</h3>
+          <p style="color:var(--gray-500);margin-bottom:24px;">Freelance editors and clipping professionals use Clipame to showcase their work, connect with creators, and find paid campaigns and full-time opportunities.</p>
+          <ul style="color:var(--gray-600);font-size:0.9375rem;">
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Create a professional profile</li>
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Showcase your portfolio and stats</li>
+            <li style="padding:8px 0;border-bottom:1px solid var(--gray-100);">Apply to paid campaigns and jobs</li>
+            <li style="padding:8px 0;">Build your reputation with reviews</li>
+          </ul>
+          <a href="#submit" class="btn btn--primary mt-24" data-modal="#submitModal">Create Your Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED AGENCIES (NAVY SECTION) -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="text-center mb-48">
+        <p class="label">Industry Leaders</p>
+        <h2>Notable Clipping Companies</h2>
+        <p class="section-subtitle">The agencies and platforms shaping the clipping industry.</p>
+      </div>
+      <div class="featured-grid">
+        <div class="featured-item">
+          <div class="featured-item__name">Clipping Agency</div>
+          <div class="featured-item__desc">Managed clipping campaigns for creators and brands. 10B+ views, 1,000+ creators.</div>
+          <a href="agencies.html" class="featured-item__link">View Profile &rarr;</a>
+        </div>
+        <div class="featured-item">
+          <div class="featured-item__name">NovaEyes</div>
+          <div class="featured-item__desc">Performance-based clipping marketplace with 17,000+ active clippers.</div>
+          <a href="agencies.html" class="featured-item__link">View Profile &rarr;</a>
+        </div>
+        <div class="featured-item">
+          <div class="featured-item__name">Cliptic</div>
+          <div class="featured-item__desc">Enterprise clipping campaigns with 70,000+ vetted clippers worldwide.</div>
+          <a href="agencies.html" class="featured-item__link">View Profile &rarr;</a>
+        </div>
+        <div class="featured-item">
+          <div class="featured-item__name">Clipur</div>
+          <div class="featured-item__desc">Distributed clipper network with 9,000+ clippers across multiple niches.</div>
+          <a href="agencies.html" class="featured-item__link">View Profile &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Join the Clipping Directory</h2>
+        <p>Whether you're a creator looking for clippers or a clipper looking for work, Clipame is where the industry connects.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="#submit" class="btn btn--white" data-modal="#submitModal">List Your Profile</a>
+          <a href="clippers.html" class="btn btn--ghost">Browse the Directory</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">clip<span style="color:var(--gray-400)">ame</span></a>
+          <p>The definitive directory for the social media clipping industry. Connecting creators, clippers, agencies, and tools.</p>
+        </div>
+        <div>
+          <h4>Directory</h4>
+          <ul>
+            <li><a href="clippers.html">Clippers</a></li>
+            <li><a href="agencies.html">Agencies</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="about.html#learn">Learning Center</a></li>
+            <li><a href="about.html">About Clipame</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For Professionals</h4>
+          <ul>
+            <li><a href="#submit" data-modal="#submitModal">List Your Profile</a></li>
+            <li><a href="jobs.html">Post a Job</a></li>
+            <li><a href="agencies.html">Agency Directory</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Clipame. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="X / Twitter">&#120143;</a>
+          <a href="#" aria-label="Instagram">&#9679;</a>
+          <a href="#" aria-label="TikTok">&#9830;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SUBMIT MODAL -->
+  <div class="modal-overlay" id="submitModal">
+    <div class="modal">
+      <div class="modal__header">
+        <h3>Get Listed on Clipame</h3>
+        <button class="modal__close">&times;</button>
+      </div>
+      <form action="https://formspree.io/f/placeholder" method="POST">
+        <div class="form-group">
+          <label>I am a...</label>
+          <select class="form-select" name="type" required>
+            <option value="">Select one</option>
+            <option value="clipper">Clipper / Editor</option>
+            <option value="agency">Agency / Company</option>
+            <option value="creator">Creator looking for clippers</option>
+            <option value="tool">Software / Tool</option>
+            <option value="community">Community</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Name / Company</label>
+          <input type="text" class="form-input" name="name" required placeholder="Your name or company name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-input" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Website or Portfolio URL</label>
+          <input type="url" class="form-input" name="website" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label>Tell us about yourself</label>
+          <textarea class="form-textarea" name="description" placeholder="Specialties, experience, platforms you work with..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" style="width:100%">Submit Listing Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipping Agency Directory - Find Clipping Agencies | Clipame</title>
+  <meta name="description" content="Browse clipping agencies, creator management companies, and content distribution networks. Compare services, pricing, and portfolios.">
+  <link rel="canonical" href="https://clipame.com/agencies.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">clip<span>ame</span></a>
+      <nav class="nav">
+        <a href="clippers.html" class="nav__link">Clippers</a>
+        <a href="agencies.html" class="nav__link nav__link--active">Agencies</a>
+        <a href="tools.html" class="nav__link">Tools</a>
+        <a href="communities.html" class="nav__link">Communities</a>
+        <a href="jobs.html" class="nav__link">Jobs</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List Your Agency</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Agencies</span>
+      </div>
+      <h1>Agency Directory</h1>
+      <p>Clipping agencies, distribution networks, and creator management companies.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="agency">Full-Service Agency</button>
+        <button class="filter-btn" data-filter="marketplace">Marketplace</button>
+        <button class="filter-btn" data-filter="network">Distribution Network</button>
+        <button class="filter-btn" data-filter="platform">Platform</button>
+      </div>
+
+      <div class="listings-grid">
+
+        <div class="listing-card" data-category="agency">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:var(--navy-dark)">CA</div>
+            <div>
+              <div class="listing-card__name">Clipping Agency</div>
+              <div class="listing-card__role">Full-Service Clipping Agency &middot; United States</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Managed Campaigns</span>
+            <span class="tag tag--navy">Creator Growth</span>
+            <span class="tag">Brand Distribution</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Managed clipping campaigns for creators and brands. One of the largest full-service agencies in the clipping space.</p>
+          <div class="listing-card__stats">
+            <span><strong>10B+</strong> views</span>
+            <span><strong>1,000+</strong> creators</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">Monthly Retainer</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="marketplace">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#1a4d80">NE</div>
+            <div>
+              <div class="listing-card__name">NovaEyes</div>
+              <div class="listing-card__role">Performance-Based Marketplace</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Marketplace</span>
+            <span class="tag tag--navy">Performance-Based</span>
+            <span class="tag">Pay Per View</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Performance-based clipping marketplace connecting creators with a large network of active clippers.</p>
+          <div class="listing-card__stats">
+            <span><strong>17,000+</strong> clippers</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">CPM Model</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="network">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#0d3d6b">CT</div>
+            <div>
+              <div class="listing-card__name">Cliptic</div>
+              <div class="listing-card__role">Enterprise Distribution Network</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Enterprise</span>
+            <span class="tag tag--navy">Distribution</span>
+            <span class="tag">Vetted Network</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Enterprise-scale clipping campaigns with one of the largest vetted clipper networks in the industry.</p>
+          <div class="listing-card__stats">
+            <span><strong>70,000+</strong> vetted clippers</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">Enterprise Pricing</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="network">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#0a3356">CR</div>
+            <div>
+              <div class="listing-card__name">Clipur</div>
+              <div class="listing-card__role">Distributed Clipper Network</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Distributed Network</span>
+            <span class="tag tag--navy">Multi-Niche</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Distributed clipper network operating across multiple content niches and geographies.</p>
+          <div class="listing-card__stats">
+            <span><strong>9,000+</strong> clippers</span>
+          </div>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">Performance-Based</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="agency">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#004080">CI</div>
+            <div>
+              <div class="listing-card__name">ClippingAgency.io</div>
+              <div class="listing-card__role">Performance Clipping Service</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Performance</span>
+            <span class="tag tag--navy">Pay Per View</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Performance-based clipping service operating on a pay-per-view model for creators and brands.</p>
+          <div class="listing-card__meta">
+            <span class="badge badge--gray">CPM Model</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="platform">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#002b55">VY</div>
+            <div>
+              <div class="listing-card__name">Vyro</div>
+              <div class="listing-card__role">Creator-Clipper Platform</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Platform</span>
+            <span class="tag">Creator Connection</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Platform connecting creators with independent clippers for campaign-based content distribution.</p>
+          <div class="listing-card__meta">
+            <span class="badge badge--blue">Platform</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="platform">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#003d73">CL</div>
+            <div>
+              <div class="listing-card__name">Clouted</div>
+              <div class="listing-card__role">Clipper-Creator Marketplace</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Platform</span>
+            <span class="tag">Marketplace</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Marketplace platform connecting creators with clippers for managed content repurposing campaigns.</p>
+          <div class="listing-card__meta">
+            <span class="badge badge--blue">Platform</span>
+          </div>
+        </div>
+
+        <div class="listing-card" data-category="platform">
+          <div class="listing-card__header">
+            <div class="listing-card__avatar" style="background:#004d8c">GN</div>
+            <div>
+              <div class="listing-card__name">Genni</div>
+              <div class="listing-card__role">Creator Distribution Platform</div>
+            </div>
+          </div>
+          <div class="listing-card__tags">
+            <span class="tag tag--navy">Platform</span>
+            <span class="tag">Distribution</span>
+          </div>
+          <p style="font-size:0.9375rem;color:var(--gray-500);margin:12px 0">Platform enabling creators to distribute content through networks of independent clippers at scale.</p>
+          <div class="listing-card__meta">
+            <span class="badge badge--blue">Platform</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-48">
+        <div class="cta-banner">
+          <h2>List Your Agency</h2>
+          <p>Get your clipping agency or platform listed in the directory and connect with creators.</p>
+          <a href="index.html#submit" class="btn btn--white" data-modal="#submitModal">Submit Your Agency</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">clip<span style="color:var(--gray-400)">ame</span></a>
+          <p>The definitive directory for the social media clipping industry.</p>
+        </div>
+        <div><h4>Directory</h4><ul><li><a href="clippers.html">Clippers</a></li><li><a href="agencies.html">Agencies</a></li><li><a href="tools.html">Tools</a></li><li><a href="communities.html">Communities</a></li><li><a href="jobs.html">Jobs</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="about.html#learn">Learning Center</a></li><li><a href="about.html">About</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div><h4>For Professionals</h4><ul><li><a href="index.html#submit">List Your Profile</a></li><li><a href="jobs.html">Post a Job</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Clipame. All rights reserved.</span>
+        <div class="footer__social"><a href="#" aria-label="X / Twitter">&#120143;</a><a href="#" aria-label="Instagram">&#9679;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="submitModal">
+    <div class="modal">
+      <div class="modal__header"><h3>List Your Agency</h3><button class="modal__close">&times;</button></div>
+      <form action="https://formspree.io/f/placeholder" method="POST">
+        <div class="form-group"><label>Company Name</label><input type="text" class="form-input" name="name" required></div>
+        <div class="form-group"><label>Website</label><input type="url" class="form-input" name="website" required></div>
+        <div class="form-group"><label>Email</label><input type="email" class="form-input" name="email" required></div>
+        <div class="form-group"><label>Type</label><select class="form-select" name="type"><option>Full-Service Agency</option><option>Marketplace</option><option>Distribution Network</option><option>Platform</option></select></div>
+        <div class="form-group"><label>Description</label><textarea class="form-textarea" name="description" placeholder="Services, team size, pricing model..."></textarea></div>
+        <button type="submit" class="btn btn--primary" style="width:100%">Submit Agency Listing</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

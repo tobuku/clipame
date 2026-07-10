@@ -1,0 +1,33 @@
+IMAGES NEEDED FOR CLIPAME.COM
+==============================
+
+Place the following images in this folder:
+
+1. favicon.ico (32x32)
+   - Simple "C" lettermark in dark blue (#003366) on transparent background
+   - Or a small clip/scissors icon in dark blue
+
+2. og-image.png (1200x630)
+   - Open Graph social sharing image
+   - Dark blue background with "Clipame" logo centered
+   - Tagline: "The Social Media Clipping Industry Directory"
+   - Used when the site is shared on social media
+
+3. hero-bg.jpg (1920x1080) [OPTIONAL]
+   - Abstract dark blue gradient or subtle pattern
+   - Could show a collage of short-form video platform icons
+   - Currently handled by CSS gradient, only needed if you want a photo background
+
+4. logo.svg or logo.png (400x100)
+   - Full Clipame wordmark logo
+   - "clip" in dark blue (#003366), "ame" in black
+   - Clean, modern sans-serif font
+   - Currently the logo is text-only via CSS, this is optional
+
+5. about-team.jpg (800x500) [OPTIONAL]
+   - If you want a team/founder photo on the about page
+
+NOTES:
+- All images should be optimized for web (compressed)
+- PNG for logos/icons, JPG for photos
+- The site currently works without any images using CSS styling
