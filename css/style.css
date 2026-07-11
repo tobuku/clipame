@@ -173,6 +173,220 @@ h3{font-size:1.25rem}
 .hero__stat-number{font-size:1.75rem;font-weight:700;color:var(--white)}
 .hero__stat-label{font-size:0.875rem;color:rgba(255,255,255,0.6);margin-top:4px}
 
+/* ===== HERO SPLIT LAYOUT ===== */
+.hero--split{padding:140px 0 60px}
+.hero__grid{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:60px;
+  align-items:center;
+}
+
+/* ===== WORKFLOW VISUAL ===== */
+.hero__visual{position:relative;z-index:1}
+.workflow{display:flex;flex-direction:column;align-items:center;gap:0}
+
+/* Staggered fade-in */
+.wf-step{opacity:0;animation:wfFadeUp 0.6s ease forwards}
+.wf-step:nth-child(1){animation-delay:0.3s}
+.wf-step:nth-child(2){animation-delay:0.8s}
+.wf-step:nth-child(3){animation-delay:1.3s}
+.wf-step:nth-child(4){animation-delay:1.8s}
+.wf-step:nth-child(5){animation-delay:2.3s}
+@keyframes wfFadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Screen mockups */
+.wf-screen{
+  width:100%;max-width:360px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;
+  overflow:hidden;
+}
+.wf-screen--small{max-width:240px}
+.wf-screen__bar{
+  display:flex;gap:5px;
+  padding:8px 12px;
+  background:rgba(255,255,255,0.04);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.wf-screen__bar span{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,0.15);
+}
+.wf-screen__body{padding:16px}
+
+/* Waveform animation */
+.wf-waveform{
+  display:flex;align-items:flex-end;gap:3px;
+  height:48px;margin-bottom:12px;
+}
+.wf-waveform span{
+  flex:1;
+  background:linear-gradient(180deg,rgba(100,180,255,0.7),rgba(100,180,255,0.3));
+  border-radius:2px;
+  animation:wfPulse 1.5s ease-in-out infinite alternate;
+}
+.wf-waveform span:nth-child(odd){animation-delay:0.2s}
+.wf-waveform span:nth-child(3n){animation-delay:0.5s}
+.wf-waveform span:nth-child(4n){animation-delay:0.8s}
+@keyframes wfPulse{
+  0%{transform:scaleY(1)}
+  100%{transform:scaleY(0.6)}
+}
+
+/* Timeline with moving playhead */
+.wf-timeline{
+  height:6px;
+  background:rgba(255,255,255,0.1);
+  border-radius:3px;
+  position:relative;
+  overflow:hidden;
+}
+.wf-timeline__track{
+  position:absolute;left:0;top:0;bottom:0;width:0;
+  background:linear-gradient(90deg,rgba(100,180,255,0.6),rgba(100,180,255,0.9));
+  border-radius:3px;
+  animation:wfScrub 4s ease-in-out infinite;
+}
+.wf-timeline__playhead{
+  position:absolute;top:-3px;left:0;
+  width:12px;height:12px;
+  background:var(--white);
+  border-radius:50%;
+  box-shadow:0 0 8px rgba(100,180,255,0.6);
+  animation:wfScrubHead 4s ease-in-out infinite;
+}
+@keyframes wfScrub{
+  0%,100%{width:0}
+  50%{width:100%}
+}
+@keyframes wfScrubHead{
+  0%,100%{left:0}
+  50%{left:calc(100% - 12px)}
+}
+
+/* Arrow connectors */
+.wf-arrow{
+  display:flex;flex-direction:column;align-items:center;
+  padding:8px 0;
+}
+.wf-arrow__label{
+  font-size:0.75rem;
+  color:rgba(255,255,255,0.4);
+  margin-top:4px;
+  letter-spacing:0.02em;
+}
+
+/* Caption preview animation */
+.wf-caption-preview{
+  text-align:center;
+  padding:12px 8px;
+}
+.wf-caption-line{
+  font-weight:700;
+  font-size:0.9375rem;
+  color:var(--white);
+  padding:4px 10px;
+  border-radius:4px;
+  display:inline-block;
+}
+.wf-caption-line--1{
+  background:rgba(255,200,0,0.85);
+  color:#1a1a1a;
+  animation:wfCaption1 3s ease-in-out infinite;
+}
+.wf-caption-line--2{
+  background:rgba(255,200,0,0.85);
+  color:#1a1a1a;
+  margin-top:4px;
+  animation:wfCaption2 3s ease-in-out infinite;
+}
+@keyframes wfCaption1{
+  0%,100%{opacity:0;transform:translateY(8px)}
+  20%,80%{opacity:1;transform:translateY(0)}
+}
+@keyframes wfCaption2{
+  0%,15%,100%{opacity:0;transform:translateY(8px)}
+  30%,80%{opacity:1;transform:translateY(0)}
+}
+
+/* Phone mockups */
+.wf-platforms{display:flex;gap:12px;justify-content:center}
+.wf-phone{
+  width:90px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  transition:transform 0.3s ease, border-color 0.3s ease;
+}
+.wf-phone:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,0.3);
+}
+.wf-phone__notch{
+  width:36px;height:4px;
+  background:rgba(255,255,255,0.15);
+  border-radius:2px;
+  margin:6px auto 0;
+}
+.wf-phone__content{
+  padding:16px 8px 14px;
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.wf-phone__icon{
+  font-size:1.25rem;
+  opacity:0.6;
+}
+.wf-phone__name{
+  font-size:0.6875rem;
+  font-weight:600;
+  color:rgba(255,255,255,0.8);
+  letter-spacing:0.02em;
+}
+.wf-phone__views{
+  font-size:0.625rem;
+  font-weight:700;
+  padding:2px 6px;
+  border-radius:8px;
+  animation:wfCount 2s ease forwards;
+  animation-delay:2.8s;
+  opacity:0;
+}
+@keyframes wfCount{
+  from{opacity:0;transform:scale(0.8)}
+  to{opacity:1;transform:scale(1)}
+}
+.wf-phone--tiktok .wf-phone__views{background:rgba(255,0,80,0.3);color:#ff9ebb}
+.wf-phone--reels .wf-phone__views{background:rgba(193,53,132,0.3);color:#e899c8}
+.wf-phone--shorts .wf-phone__views{background:rgba(255,0,0,0.25);color:#ff9999}
+
+/* Workflow labels */
+.wf-label{
+  font-size:0.75rem;
+  font-weight:600;
+  color:rgba(255,255,255,0.5);
+  text-align:center;
+  margin-top:8px;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+}
+
+/* Respect reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .wf-step{opacity:1;animation:none}
+  .wf-waveform span{animation:none}
+  .wf-timeline__track,.wf-timeline__playhead{animation:none}
+  .wf-caption-line--1,.wf-caption-line--2{animation:none;opacity:1;transform:none}
+  .wf-phone__views{animation:none;opacity:1;transform:none}
+}
+
 /* ===== SEARCH BAR ===== */
 .search-bar{
   background:var(--white);
@@ -545,6 +759,8 @@ h3{font-size:1.25rem}
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
   .footer__grid{grid-template-columns:repeat(2,1fr)}
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .hero__visual{max-width:360px;margin:0 auto}
 }
 @media(max-width:768px){
   .nav{
@@ -561,6 +777,10 @@ h3{font-size:1.25rem}
   .nav__cta{margin-left:0;margin-top:12px}
   .hamburger{display:flex}
   .hero{padding:120px 0 80px}
+  .hero--split{padding:120px 0 60px}
+  .hero__grid{grid-template-columns:1fr;gap:32px}
+  .hero__visual{max-width:300px;margin:0 auto}
+  .wf-phone{width:76px}
   .hero__stats{gap:24px;flex-wrap:wrap}
   .hero__actions{flex-direction:column}
   .hero__actions .btn{width:100%;justify-content:center}

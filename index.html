@@ -46,8 +46,8 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container">
+  <section class="hero hero--split">
+    <div class="container hero__grid">
       <div class="hero__content">
         <p class="label">The Clipping Industry Directory</p>
         <h1>Find the people behind the clips.</h1>
@@ -61,6 +61,65 @@
           <a href="#submit" class="btn btn--ghost" data-modal="#submitModal">Get Listed</a>
         </div>
       </div>
+
+      <!-- ANIMATED WORKFLOW VISUAL -->
+      <div class="hero__visual">
+        <div class="workflow">
+          <!-- Source: Long-form video -->
+          <div class="wf-source wf-step">
+            <div class="wf-screen">
+              <div class="wf-screen__bar"><span></span><span></span><span></span></div>
+              <div class="wf-screen__body">
+                <div class="wf-waveform">
+                  <span style="height:40%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:85%"></span><span style="height:45%"></span><span style="height:90%"></span><span style="height:60%"></span><span style="height:75%"></span><span style="height:50%"></span><span style="height:80%"></span><span style="height:35%"></span><span style="height:65%"></span><span style="height:95%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:40%"></span>
+                </div>
+                <div class="wf-timeline">
+                  <div class="wf-timeline__track"></div>
+                  <div class="wf-timeline__playhead"></div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-label">2hr Podcast</div>
+          </div>
+
+          <!-- Arrow down -->
+          <div class="wf-arrow wf-step">
+            <svg width="24" height="32" viewBox="0 0 24 32"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
+            <span class="wf-arrow__label">AI finds viral moments</span>
+          </div>
+
+          <!-- Clipper editing -->
+          <div class="wf-editor wf-step">
+            <div class="wf-screen wf-screen--small">
+              <div class="wf-screen__bar"><span></span><span></span><span></span></div>
+              <div class="wf-screen__body">
+                <div class="wf-caption-preview">
+                  <div class="wf-caption-line wf-caption-line--1">"This changed everything"</div>
+                  <div class="wf-caption-line wf-caption-line--2">for my business...</div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-label">Clipper adds captions &amp; edits</div>
+          </div>
+
+          <!-- Arrow down -->
+          <div class="wf-arrow wf-step">
+            <svg width="24" height="32" viewBox="0 0 24 32"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
+            <span class="wf-arrow__label">Distributed everywhere</span>
+          </div>
+
+          <!-- Platform outputs -->
+          <div class="wf-platforms wf-step">
+            <div class="wf-phone"><div class="wf-phone__notch"></div><div class="wf-phone__content wf-phone--tiktok"><span class="wf-phone__icon">&#9654;</span><span class="wf-phone__name">TikTok</span><span class="wf-phone__views">2.4M views</span></div></div>
+            <div class="wf-phone"><div class="wf-phone__notch"></div><div class="wf-phone__content wf-phone--reels"><span class="wf-phone__icon">&#9654;</span><span class="wf-phone__name">Reels</span><span class="wf-phone__views">1.8M views</span></div></div>
+            <div class="wf-phone"><div class="wf-phone__notch"></div><div class="wf-phone__content wf-phone--shorts"><span class="wf-phone__icon">&#9654;</span><span class="wf-phone__name">Shorts</span><span class="wf-phone__views">3.1M views</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="container">
       <div class="hero__stats">
         <div>
           <div class="hero__stat-number">6</div>
