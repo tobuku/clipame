@@ -405,6 +405,7 @@ h3{font-size:1.25rem}
 }
 .search-bar input::placeholder{color:var(--gray-400)}
 .search-bar .btn{border-radius:var(--radius);white-space:nowrap}
+.page-header .search-bar{background:var(--white);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm)}
 
 /* ===== CATEGORY CARDS ===== */
 .categories-grid{
