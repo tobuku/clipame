@@ -32,7 +32,7 @@
         <a href="communities.html" class="nav__link">Communities</a>
         <a href="jobs.html" class="nav__link">Jobs</a>
         <a href="about.html" class="nav__link">About</a>
-        <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta">List a Tool</a>
+        <a href="#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List a Tool</a>
       </nav>
       <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
@@ -264,6 +264,14 @@
         </div>
 
       </div>
+
+      <div class="text-center mt-48">
+        <div class="cta-banner">
+          <h2>List Your Tool</h2>
+          <p>Get your clipping software or platform listed in the directory and reach thousands of clippers.</p>
+          <a href="#submit" class="btn btn--white" data-modal="#submitModal">Submit Your Tool</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -283,6 +291,20 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-overlay" id="submitModal">
+    <div class="modal">
+      <div class="modal__header"><h3>List Your Tool</h3><button class="modal__close">&times;</button></div>
+      <form action="https://formspree.io/f/mkoldeja" method="POST">
+        <div class="form-group"><label>Tool Name</label><input type="text" class="form-input" name="name" required></div>
+        <div class="form-group"><label>Website</label><input type="url" class="form-input" name="website" required></div>
+        <div class="form-group"><label>Email</label><input type="email" class="form-input" name="email" required></div>
+        <div class="form-group"><label>Category</label><select class="form-select" name="type"><option>AI Clipping</option><option>Video Editing</option><option>Captions</option><option>Analytics</option><option>Scheduling</option><option>Thumbnails</option></select></div>
+        <div class="form-group"><label>Description</label><textarea class="form-textarea" name="description" placeholder="Features, pricing, what makes it useful for clippers..."></textarea></div>
+        <button type="submit" class="btn btn--primary" style="width:100%">Submit Tool Listing</button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
