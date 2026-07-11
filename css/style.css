@@ -757,6 +757,52 @@ h3{font-size:1.25rem}
 }
 .modal__close:hover{color:var(--gray-700)}
 
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:24px;
+}
+.testimonial{
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:28px;
+  position:relative;
+  transition:all var(--transition);
+}
+.testimonial:hover{box-shadow:var(--shadow);border-color:var(--gray-300)}
+.testimonial__quote{
+  font-size:1rem;
+  color:var(--gray-600);
+  line-height:1.7;
+  margin-bottom:20px;
+  font-style:italic;
+}
+.testimonial__quote::before{
+  content:'\201C';
+  font-size:2.5rem;
+  font-style:normal;
+  color:var(--navy);
+  opacity:0.2;
+  line-height:0;
+  position:relative;
+  top:12px;
+  margin-right:4px;
+}
+.testimonial__author{
+  display:flex;align-items:center;gap:12px;
+  padding-top:16px;border-top:1px solid var(--gray-100);
+}
+.testimonial__avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--navy);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:0.875rem;flex-shrink:0;
+}
+.testimonial__name{font-weight:600;font-size:0.9375rem;color:var(--gray-800)}
+.testimonial__role{font-size:0.8125rem;color:var(--gray-500)}
+
 /* ===== NEWSLETTER SIGNUP ===== */
 .newsletter{
   background:var(--navy);
