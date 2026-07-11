@@ -470,8 +470,25 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- NEWSLETTER -->
   <section class="section section--gray">
+    <div class="container">
+      <div class="newsletter">
+        <div class="newsletter__text">
+          <h3>Stay in the Loop</h3>
+          <p>Weekly clipping industry news, new tools, campaigns, and career tips. No spam.</p>
+        </div>
+        <form class="newsletter__form" action="https://formspree.io/f/mkoldeja" method="POST">
+          <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn--white">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--gray" style="padding-top:0">
     <div class="container">
       <div class="cta-banner">
         <h2>Join the Clipping Directory</h2>
@@ -491,6 +508,13 @@
         <div class="footer__brand">
           <a href="index.html" class="logo">clip<span style="color:var(--gray-400)">ame</span></a>
           <p>The definitive directory for the social media clipping industry. Connecting creators, clippers, agencies, and tools.</p>
+          <div class="footer__newsletter">
+            <form action="https://formspree.io/f/mkoldeja" method="POST">
+              <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+              <input type="email" name="email" placeholder="Your email" required>
+              <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+            </form>
+          </div>
         </div>
         <div>
           <h4>Directory</h4>
@@ -515,7 +539,7 @@
           <ul>
             <li><a href="#submit" data-modal="#submitModal">List Your Profile</a></li>
             <li><a href="jobs.html">Post a Job</a></li>
-            <li><a href="agencies.html">Agency Directory</a></li>
+            <li><a href="campaigns.html">Create Campaign</a></li>
           </ul>
         </div>
       </div>

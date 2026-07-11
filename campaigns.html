@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVYJRDK6JZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVYJRDK6JZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Clipping Campaign | Clipame</title>
+  <meta name="description" content="Launch a clipping campaign on Clipame. Set your budget, CPM, content brief, and connect with thousands of clippers to distribute your content across TikTok, Reels, and Shorts.">
+  <meta property="og:title" content="Create a Clipping Campaign | Clipame">
+  <meta property="og:description" content="Launch a clipping campaign on Clipame. Set your budget, CPM, and content brief to connect with clippers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clipame.com/campaigns.html">
+  <meta property="og:image" content="https://clipame.com/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Create a Clipping Campaign | Clipame">
+  <meta name="twitter:description" content="Launch a clipping campaign on Clipame. Set your budget, CPM, and content brief to connect with clippers.">
+  <meta name="twitter:image" content="https://clipame.com/images/og-default.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://clipame.com/campaigns.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">clip<span>ame</span></a>
+      <nav class="nav">
+        <a href="clippers.html" class="nav__link">Clippers</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="tools.html" class="nav__link">Tools</a>
+        <a href="communities.html" class="nav__link">Communities</a>
+        <a href="jobs.html" class="nav__link">Jobs</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="campaigns.html" class="btn btn--primary btn--sm nav__cta">Create Campaign</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Create Campaign</span></div>
+      <h1>Create a Clipping Campaign</h1>
+      <p>Set your budget, define your brief, and connect with clippers who will distribute your content across TikTok, Reels, and Shorts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="campaign-form">
+
+        <!-- Step tabs -->
+        <div class="campaign-steps">
+          <div class="campaign-step-tab active" data-step="1">
+            <span class="step-num">1</span> Basic Info
+          </div>
+          <div class="campaign-step-tab" data-step="2">
+            <span class="step-num">2</span> Budget &amp; Duration
+          </div>
+          <div class="campaign-step-tab" data-step="3">
+            <span class="step-num">3</span> Content Brief
+          </div>
+          <div class="campaign-step-tab" data-step="4">
+            <span class="step-num">4</span> Review &amp; Submit
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/mkoldeja" method="POST" id="campaignForm">
+          <input type="hidden" name="_subject" value="New Clipame Campaign Submission">
+
+          <!-- STEP 1: Basic Info -->
+          <div class="campaign-panel active" data-panel="1">
+            <h3 class="mb-24">Campaign Details</h3>
+            <p style="color:var(--gray-500);margin-bottom:24px;">Tell us about your campaign so clippers know what to expect.</p>
+
+            <div class="form-group">
+              <label>Campaign Name</label>
+              <input type="text" class="form-input" name="campaign_name" required placeholder="e.g. Summer Product Launch" maxlength="50">
+              <small style="color:var(--gray-400);font-size:0.75rem;">Max 50 characters</small>
+            </div>
+
+            <div class="field-row">
+              <div class="form-group">
+                <label>Your Name / Company</label>
+                <input type="text" class="form-input" name="company" required placeholder="Company or creator name">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-input" name="email" required placeholder="you@example.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Website (optional)</label>
+              <input type="url" class="form-input" name="website" placeholder="https://...">
+            </div>
+
+            <div class="form-group">
+              <label>Content Language</label>
+              <select class="form-select" name="language">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>Portuguese</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Target Platforms</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="platforms" value="tiktok" checked><span>TikTok</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="platforms" value="reels" checked><span>Instagram Reels</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="platforms" value="shorts" checked><span>YouTube Shorts</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="platforms" value="x"><span>X (Twitter)</span></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Content Niche</label>
+              <select class="form-select" name="niche">
+                <option value="">Select a niche</option>
+                <option>Podcast</option>
+                <option>Gaming</option>
+                <option>Finance / Business</option>
+                <option>Fitness / Health</option>
+                <option>Education</option>
+                <option>Comedy / Entertainment</option>
+                <option>Sports</option>
+                <option>AI / Tech</option>
+                <option>Crypto / Web3</option>
+                <option>Lifestyle</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="campaign-nav">
+              <div></div>
+              <button type="button" class="btn btn--primary" onclick="goToStep(2)">Next: Budget &amp; Duration</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Budget & Duration -->
+          <div class="campaign-panel" data-panel="2">
+            <h3 class="mb-24">Budget &amp; Duration</h3>
+            <p style="color:var(--gray-500);margin-bottom:24px;">Set your campaign dates and budget. Creators are paid per 1,000 views (CPM). A higher CPM attracts more participation.</p>
+
+            <div class="field-row">
+              <div class="form-group">
+                <label>Start Date</label>
+                <input type="date" class="form-input" name="start_date" required>
+              </div>
+              <div class="form-group">
+                <label>End Date</label>
+                <input type="date" class="form-input" name="end_date" required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="form-group">
+                <label>CPM Rate ($ per 1,000 views)</label>
+                <select class="form-select" name="cpm" id="cpmSelect">
+                  <option value="0.50">$0.50</option>
+                  <option value="1.00">$1.00</option>
+                  <option value="1.50" selected>$1.50</option>
+                  <option value="2.00">$2.00</option>
+                  <option value="2.50">$2.50</option>
+                  <option value="3.00">$3.00</option>
+                  <option value="5.00">$5.00</option>
+                  <option value="custom">Custom (specify in brief)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Total Budget ($)</label>
+                <input type="number" class="form-input" name="budget" id="budgetInput" required placeholder="e.g. 5000" min="100" step="100">
+              </div>
+            </div>
+
+            <div id="budgetEstimate" style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px;margin-bottom:20px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span style="font-size:0.875rem;color:var(--gray-500);">Estimated Views</span>
+                <span id="estViews" style="font-size:1.25rem;font-weight:700;color:var(--navy);">--</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:0.875rem;color:var(--gray-500);">Effective CPM Range</span>
+                <span id="estCpm" style="font-size:0.9375rem;font-weight:600;color:var(--gray-600);">--</span>
+              </div>
+              <p style="font-size:0.75rem;color:var(--gray-400);margin-top:12px;">Effective CPM is typically 50-100% of your set rate. Estimates based on industry averages.</p>
+            </div>
+
+            <div class="form-group">
+              <label>Payment Model</label>
+              <select class="form-select" name="payment_model">
+                <option>CPM (Pay per 1,000 views)</option>
+                <option>Fixed rate per clip</option>
+                <option>Revenue share</option>
+                <option>Hybrid (CPM + bonus)</option>
+                <option>Other (specify in brief)</option>
+              </select>
+            </div>
+
+            <div class="campaign-nav">
+              <button type="button" class="btn btn--outline" onclick="goToStep(1)">Back</button>
+              <button type="button" class="btn btn--primary" onclick="goToStep(3)">Next: Content Brief</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Content Brief -->
+          <div class="campaign-panel" data-panel="3">
+            <h3 class="mb-24">Content Brief</h3>
+            <p style="color:var(--gray-500);margin-bottom:24px;">Provide guidelines for clippers to follow when creating and distributing your content.</p>
+
+            <div class="form-group">
+              <label>Paid Partnership Disclosure</label>
+              <select class="form-select" name="disclosure">
+                <option>Hashtag (#ad, #sponsored, #paidpartnership)</option>
+                <option>Native platform paid partnership label</option>
+                <option>Both hashtag and native label</option>
+              </select>
+              <small style="color:var(--gray-400);font-size:0.75rem;">Creators must disclose paid partnerships per FTC guidelines.</small>
+            </div>
+
+            <div class="form-group">
+              <label>Disclosure Hashtag (if applicable)</label>
+              <input type="text" class="form-input" name="disclosure_hashtag" placeholder="#paidpartnership" maxlength="45">
+            </div>
+
+            <div class="form-group">
+              <label>Required Caption / Hashtags (optional)</label>
+              <input type="text" class="form-input" name="required_caption" placeholder="e.g. #YourBrand @youraccount">
+            </div>
+
+            <div class="field-row">
+              <div class="form-group">
+                <label>Minimum Video Length</label>
+                <select class="form-select" name="min_length">
+                  <option value="">No minimum</option>
+                  <option>15 seconds</option>
+                  <option>30 seconds</option>
+                  <option>45 seconds</option>
+                  <option>60 seconds</option>
+                  <option>90 seconds</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Maximum Video Length</label>
+                <select class="form-select" name="max_length">
+                  <option value="">No maximum</option>
+                  <option>30 seconds</option>
+                  <option>60 seconds</option>
+                  <option>90 seconds</option>
+                  <option>3 minutes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Audio / Sound (optional)</label>
+              <input type="text" class="form-input" name="audio_link" placeholder="Link to TikTok or IG audio (optional)">
+            </div>
+
+            <div class="form-group">
+              <label>Campaign Brief</label>
+              <textarea class="form-textarea" name="brief" rows="8" placeholder="Describe your campaign with instructions, brand guidelines, helpful tips, links, and notes. Include any source content URLs (YouTube, podcast links, etc.) that clippers should use.
+
+Example:
+- We're launching a fitness app and want clippers to create engaging shorts from our podcast episodes
+- Source content: [YouTube playlist link]
+- Style: high-energy, use trending sounds, add dynamic captions
+- Do NOT: use competitor brand names, make health claims" maxlength="8000" style="min-height:200px"></textarea>
+              <small style="color:var(--gray-400);font-size:0.75rem;">0 / 8,000 characters</small>
+            </div>
+
+            <div class="form-group">
+              <label>Source Content Links (optional)</label>
+              <textarea class="form-textarea" name="source_links" rows="3" placeholder="Paste links to YouTube videos, podcast episodes, or other source content (one per line)" style="min-height:80px"></textarea>
+            </div>
+
+            <div class="campaign-nav">
+              <button type="button" class="btn btn--outline" onclick="goToStep(2)">Back</button>
+              <button type="button" class="btn btn--primary" onclick="goToStep(4)">Next: Review</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Review & Submit -->
+          <div class="campaign-panel" data-panel="4">
+            <h3 class="mb-24">Review Your Campaign</h3>
+            <p style="color:var(--gray-500);margin-bottom:24px;">Review your campaign details below before submitting. Our team will review your submission and get back to you within 1-2 business days.</p>
+
+            <div id="reviewSummary" style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:28px;margin-bottom:24px;">
+              <div style="display:grid;gap:16px;">
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Campaign</span>
+                  <span id="revName" style="font-weight:600;">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Company / Creator</span>
+                  <span id="revCompany" style="font-weight:600;">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Platforms</span>
+                  <span id="revPlatforms" style="font-weight:600;">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Niche</span>
+                  <span id="revNiche" style="font-weight:600;">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Budget</span>
+                  <span id="revBudget" style="font-weight:700;color:var(--navy);">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--gray-200);">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">CPM Rate</span>
+                  <span id="revCpm" style="font-weight:600;">--</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;">
+                  <span style="font-size:0.875rem;color:var(--gray-500);">Dates</span>
+                  <span id="revDates" style="font-weight:600;">--</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:rgba(0,51,102,0.04);border:1px solid rgba(0,51,102,0.12);border-radius:var(--radius);padding:16px;margin-bottom:24px;">
+              <p style="font-size:0.875rem;color:var(--gray-600);"><strong>What happens next?</strong> Our team reviews your campaign within 1-2 business days. We'll reach out via email to confirm details, discuss CPM optimization, and help you launch.</p>
+            </div>
+
+            <div class="campaign-nav">
+              <button type="button" class="btn btn--outline" onclick="goToStep(3)">Back</button>
+              <button type="submit" class="btn btn--primary btn--lg">Submit Campaign</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">clip<span style="color:var(--gray-400)">ame</span></a>
+          <p>The definitive directory for the social media clipping industry.</p>
+          <div class="footer__newsletter">
+            <form action="https://formspree.io/f/mkoldeja" method="POST">
+              <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+              <input type="email" name="email" placeholder="Your email" required>
+              <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div><h4>Directory</h4><ul><li><a href="clippers.html">Clippers</a></li><li><a href="agencies.html">Agencies</a></li><li><a href="tools.html">Tools</a></li><li><a href="communities.html">Communities</a></li><li><a href="jobs.html">Jobs</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="about.html#learn">Learning Center</a></li><li><a href="about.html">About</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div><h4>For Professionals</h4><ul><li><a href="index.html#submit">List Your Profile</a></li><li><a href="jobs.html">Post a Job</a></li><li><a href="campaigns.html">Create Campaign</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Clipame. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Multi-step campaign form
+    function goToStep(step) {
+      // Update tabs
+      document.querySelectorAll('.campaign-step-tab').forEach(tab => {
+        const s = parseInt(tab.dataset.step);
+        tab.classList.remove('active', 'completed');
+        if (s === step) tab.classList.add('active');
+        else if (s < step) tab.classList.add('completed');
+      });
+      // Update panels
+      document.querySelectorAll('.campaign-panel').forEach(p => {
+        p.classList.toggle('active', parseInt(p.dataset.panel) === step);
+      });
+      // Populate review on step 4
+      if (step === 4) populateReview();
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    // Budget estimator
+    const cpmSelect = document.getElementById('cpmSelect');
+    const budgetInput = document.getElementById('budgetInput');
+    function updateEstimate() {
+      const cpm = parseFloat(cpmSelect.value);
+      const budget = parseFloat(budgetInput.value);
+      if (!cpm || !budget || isNaN(cpm) || isNaN(budget)) {
+        document.getElementById('estViews').textContent = '--';
+        document.getElementById('estCpm').textContent = '--';
+        return;
+      }
+      const views = Math.round(budget / cpm * 1000);
+      const lowViews = Math.round(views * 0.66);
+      const highViews = Math.round(views * 2);
+      document.getElementById('estViews').textContent = formatNum(lowViews) + ' – ' + formatNum(highViews);
+      const effLow = (cpm * 0.5).toFixed(2);
+      const effHigh = cpm.toFixed(2);
+      document.getElementById('estCpm').textContent = '$' + effLow + ' – $' + effHigh;
+    }
+    function formatNum(n) {
+      if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+      if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
+      return n.toString();
+    }
+    if (cpmSelect) cpmSelect.addEventListener('change', updateEstimate);
+    if (budgetInput) budgetInput.addEventListener('input', updateEstimate);
+
+    // Brief character counter
+    const briefField = document.querySelector('textarea[name="brief"]');
+    if (briefField) {
+      const counter = briefField.nextElementSibling;
+      briefField.addEventListener('input', () => {
+        if (counter) counter.textContent = briefField.value.length + ' / 8,000 characters';
+      });
+    }
+
+    // Populate review summary
+    function populateReview() {
+      const f = document.getElementById('campaignForm');
+      document.getElementById('revName').textContent = f.campaign_name.value || '--';
+      document.getElementById('revCompany').textContent = f.company.value || '--';
+      const platforms = Array.from(f.querySelectorAll('input[name="platforms"]:checked')).map(cb => cb.parentElement.querySelector('span').textContent);
+      document.getElementById('revPlatforms').textContent = platforms.join(', ') || '--';
+      document.getElementById('revNiche').textContent = f.niche.value || '--';
+      document.getElementById('revBudget').textContent = f.budget.value ? '$' + parseInt(f.budget.value).toLocaleString() : '--';
+      const cpmVal = f.cpm.value;
+      document.getElementById('revCpm').textContent = cpmVal === 'custom' ? 'Custom' : '$' + cpmVal + ' / 1K views';
+      const start = f.start_date.value;
+      const end = f.end_date.value;
+      document.getElementById('revDates').textContent = (start && end) ? start + ' to ' + end : '--';
+    }
+  </script>
+</body>
+</html>
