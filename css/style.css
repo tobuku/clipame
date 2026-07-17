@@ -578,6 +578,104 @@ h3{font-size:1.25rem}
 .stat__number{font-size:2.25rem;font-weight:800;color:var(--navy)}
 .stat__label{font-size:0.9375rem;color:var(--gray-500);margin-top:4px}
 
+/* ===== FEATURED CLIPPER SPOTLIGHT ===== */
+.featured-clipper{
+  background:linear-gradient(135deg,var(--navy-dark),var(--navy),var(--navy-light));
+  border-radius:var(--radius-lg);
+  padding:36px 40px;
+  margin-bottom:40px;
+  position:relative;
+  overflow:hidden;
+  color:var(--white);
+}
+.featured-clipper::before{
+  content:'';position:absolute;top:-60%;right:-15%;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);
+  border-radius:50%;
+}
+.featured-clipper::after{
+  content:'';position:absolute;bottom:-40%;left:-10%;
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);
+  border-radius:50%;
+}
+.featured-clipper__badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;
+  font-size:0.75rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.08em;
+  background:rgba(255,200,0,0.9);
+  color:#1a1a1a;
+  border-radius:20px;
+  margin-bottom:20px;
+  position:relative;z-index:1;
+}
+.featured-clipper__badge .star{
+  font-style:normal;
+  font-size:0.8rem;
+}
+.featured-clipper__card{
+  display:flex;align-items:center;gap:24px;
+  position:relative;z-index:1;
+}
+.featured-clipper__avatar{
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  border:3px solid rgba(255,200,0,0.6);
+  color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1.5rem;
+  flex-shrink:0;
+}
+.featured-clipper__info{flex:1;min-width:0}
+.featured-clipper__name{font-size:1.375rem;font-weight:700;color:var(--white);margin-bottom:4px}
+.featured-clipper__role{font-size:0.9375rem;color:rgba(255,255,255,0.7);margin-bottom:12px}
+.featured-clipper__tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.featured-clipper__tags .tag{
+  background:rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.9);
+  border:1px solid rgba(255,255,255,0.15);
+  font-size:0.8125rem;padding:5px 14px;
+}
+.featured-clipper__tags .tag--gold{
+  background:rgba(255,200,0,0.2);
+  color:rgba(255,220,100,1);
+  border-color:rgba(255,200,0,0.3);
+}
+.featured-clipper__desc{
+  font-size:0.9375rem;
+  color:rgba(255,255,255,0.75);
+  line-height:1.6;
+  margin-bottom:16px;
+  max-width:640px;
+}
+.featured-clipper__actions{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.featured-clipper__actions .badge{
+  background:rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.9);
+  padding:6px 14px;
+  font-size:0.8125rem;
+}
+.featured-clipper__actions .btn--gold{
+  background:rgba(255,200,0,0.9);
+  color:#1a1a1a;
+  border-color:rgba(255,200,0,0.9);
+  font-weight:700;
+}
+.featured-clipper__actions .btn--gold:hover{
+  background:rgba(255,220,80,1);
+  border-color:rgba(255,220,80,1);
+}
+@media(max-width:768px){
+  .featured-clipper{padding:28px 24px}
+  .featured-clipper__card{flex-direction:column;align-items:flex-start}
+  .featured-clipper__avatar{width:60px;height:60px;font-size:1.25rem}
+  .featured-clipper__name{font-size:1.125rem}
+}
+
 /* ===== FILTER BAR ===== */
 .filter-bar{
   display:flex;flex-wrap:wrap;gap:12px;
