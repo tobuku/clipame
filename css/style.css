@@ -125,6 +125,16 @@ h3{font-size:1.25rem}
   content:'';position:absolute;bottom:-4px;left:0;right:0;
   height:2px;background:var(--navy);border-radius:1px;
 }
+.nav__link--highlight{
+  background:var(--navy);color:var(--white) !important;
+  padding:6px 14px;border-radius:20px;
+  animation:nav-pulse 2s ease-in-out infinite;
+}
+.nav__link--highlight::after{display:none !important}
+@keyframes nav-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(0,51,102,.4)}
+  50%{box-shadow:0 0 0 6px rgba(0,51,102,0)}
+}
 .nav__cta{margin-left:8px}
 
 /* Mobile menu */
