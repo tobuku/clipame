@@ -135,7 +135,17 @@ h3{font-size:1.25rem}
   0%,100%{box-shadow:0 0 0 0 rgba(0,51,102,.4)}
   50%{box-shadow:0 0 0 6px rgba(0,51,102,0)}
 }
-.nav__cta{margin-left:8px}
+.nav__cta{
+  margin-left:8px;
+  background:#e6a817 !important;border-color:#e6a817 !important;color:#1a1a1a !important;
+  box-shadow:0 0 0 0 rgba(230,168,23,0.5);
+  animation:cta-glow 2s ease-in-out infinite;
+}
+.nav__cta:hover{background:#d49a14 !important;border-color:#d49a14 !important;color:#1a1a1a !important}
+@keyframes cta-glow{
+  0%,100%{box-shadow:0 0 0 0 rgba(230,168,23,0.5)}
+  50%{box-shadow:0 0 12px 4px rgba(230,168,23,0.3)}
+}
 
 /* Mobile menu */
 .hamburger{
