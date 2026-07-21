@@ -150,7 +150,8 @@ h3{font-size:1.25rem}
 /* ===== HERO ===== */
 .hero{
   padding:140px 0 100px;
-  background:linear-gradient(160deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);
+  background:linear-gradient(160deg,rgba(0,34,68,0.88) 0%,rgba(0,51,102,0.85) 50%,rgba(0,74,153,0.82) 100%),
+             url('../images/hero-editing.jpg') center/cover no-repeat;
   color:var(--white);
   position:relative;
   overflow:hidden;
@@ -507,6 +508,18 @@ h3{font-size:1.25rem}
   font-size:0.8125rem;color:var(--gray-500);
 }
 .listing-card__stats strong{color:var(--gray-700)}
+.listing-card__platforms{
+  display:flex;gap:8px;align-items:center;margin-top:12px;
+}
+.platform-icon{
+  width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:6px;background:var(--gray-100);padding:4px;transition:all var(--transition);
+}
+.platform-icon:hover{background:var(--gray-200)}
+.platform-icon svg{width:14px;height:14px;fill:var(--gray-600)}
+.platform-icon--tiktok:hover svg{fill:#000}
+.platform-icon--youtube:hover svg{fill:#FF0000}
+.platform-icon--instagram:hover svg{fill:#E4405F}
 .listing-card__meta{
   display:flex;align-items:center;justify-content:space-between;
   margin-top:16px;
@@ -713,6 +726,18 @@ h3{font-size:1.25rem}
   background:var(--gray-50);
   border-bottom:1px solid var(--gray-200);
 }
+.page-header--hero{
+  background:linear-gradient(160deg,rgba(0,34,68,0.9) 0%,rgba(0,51,102,0.87) 100%),
+             url('../images/hero-workspace.jpg') center/cover no-repeat;
+  border-bottom:none;
+}
+.page-header--hero h1{color:var(--white)}
+.page-header--hero p{color:rgba(255,255,255,0.75)}
+.page-header--hero .breadcrumb{color:rgba(255,255,255,0.5)}
+.page-header--hero .breadcrumb a{color:rgba(255,255,255,0.65)}
+.page-header--hero .search-bar{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.2)}
+.page-header--hero .search-bar input{color:var(--white)}
+.page-header--hero .search-bar input::placeholder{color:rgba(255,255,255,0.5)}
 .page-header h1{margin-bottom:8px}
 .page-header p{color:var(--gray-500);font-size:1.125rem}
 .breadcrumb{
