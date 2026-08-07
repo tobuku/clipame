@@ -1,0 +1,7 @@
+# Keep schema, scripts, and specs in git
+# Ignore generated/runtime files
+clippers_screened.csv
+rejects.csv
+*.sqlite
+*.db
+__pycache__/

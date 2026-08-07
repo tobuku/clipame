@@ -543,6 +543,46 @@ h3{font-size:1.25rem}
 .badge--green{background:#e6f9ee;color:#0d7a3e}
 .badge--blue{background:rgba(0,51,102,0.08);color:var(--navy)}
 .badge--gray{background:var(--gray-100);color:var(--gray-600)}
+.badge--gold{background:#fef3cd;color:#856404}
+.tag--gold{background:#fef3cd;color:#856404}
+
+/* ===== STAR RATING ===== */
+.listing-card__rating{
+  display:flex;align-items:center;gap:6px;
+  margin-bottom:12px;font-size:0.8125rem;
+}
+.listing-card__stars{color:#e6a817;letter-spacing:1px;font-size:0.875rem}
+.listing-card__rating-score{font-weight:700;color:var(--gray-700)}
+.listing-card__rating-count{color:var(--gray-500)}
+.listing-card__price{
+  font-size:0.8125rem;color:var(--gray-500);margin-top:4px;
+}
+.listing-card__price strong{color:var(--navy);font-weight:600}
+
+/* ===== CONTACT CTA (gated lead form) ===== */
+.listing-card__actions{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-100);
+}
+.btn--contact{
+  background:var(--navy);color:var(--white);
+  padding:8px 16px;border-radius:var(--radius);
+  font-size:0.8125rem;font-weight:600;
+  border:none;cursor:pointer;transition:all var(--transition);
+}
+.btn--contact:hover{background:var(--navy-light);color:var(--white)}
+.listing-card__claim{
+  font-size:0.6875rem;color:var(--gray-400);
+  margin-top:8px;
+}
+.listing-card__claim a{color:var(--gray-400);text-decoration:underline}
+.listing-card__claim a:hover{color:var(--navy)}
+
+/* ===== VERIFIED BADGE ===== */
+.badge--verified{
+  background:rgba(0,51,102,0.08);color:var(--navy);
+  font-size:0.6875rem;padding:2px 8px;
+}
 
 /* ===== FEATURED SECTION ===== */
 .featured-grid{
