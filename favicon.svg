@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="112" fill="#003366"/><path d="M 382.4 149.9 A 165 165 0 1 0 382.4 362.1" fill="none" stroke="#ffffff" stroke-width="66" stroke-linecap="round"/><path d="M 232.9 201.6 L 232.9 310.4 L 331.9 256.0 Z" fill="#ffffff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0a1628"/>
+  <!-- Split/crosshair icon inspired by the Clipame logo -->
+  <!-- Top-left bracket -->
+  <path d="M120,120 L120,200" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <path d="M120,120 L200,120" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <!-- Top-right bracket -->
+  <path d="M392,120 L392,200" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <path d="M312,120 L392,120" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <!-- Bottom-left bracket -->
+  <path d="M120,392 L120,312" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <path d="M120,392 L200,392" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <!-- Bottom-right bracket -->
+  <path d="M392,392 L392,312" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <path d="M312,392 L392,392" stroke="#e6a817" stroke-width="40" stroke-linecap="square" fill="none"/>
+  <!-- Center crosshair vertical -->
+  <path d="M256,160 L256,352" stroke="#e6a817" stroke-width="36" stroke-linecap="square" fill="none"/>
+  <!-- Center crosshair horizontal -->
+  <path d="M176,256 L336,256" stroke="#e6a817" stroke-width="36" stroke-linecap="square" fill="none"/>
+</svg>
