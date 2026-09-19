@@ -114,7 +114,7 @@ h3{font-size:1.25rem}
   display:inline-flex;align-items:center;
 }
 .logo span{color:var(--gray-800)}
-.logo img{height:40px;width:auto;display:block}
+.logo img{height:56px;width:auto;display:block}
 .nav{display:flex;align-items:center;gap:32px}
 .nav__link{
   font-size:0.9375rem;font-weight:500;
