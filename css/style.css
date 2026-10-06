@@ -869,6 +869,9 @@ h3{font-size:1.25rem}
   transition:all var(--transition);
 }
 .tool-card:hover{box-shadow:var(--shadow);border-color:var(--gray-300)}
+.tool-card--featured{border:2px solid var(--navy);box-shadow:0 4px 16px rgba(26,35,66,.12);position:relative}
+.tool-card--featured::after{content:"Partner";position:absolute;top:12px;right:12px;background:var(--navy);color:#fff;font-size:0.6875rem;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:0.03em}
+.tool-card--featured .tool-card__icon{background:var(--navy);color:#fff}
 .tool-card__header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .tool-card__icon{
   width:44px;height:44px;border-radius:var(--radius);
