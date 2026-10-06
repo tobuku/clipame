@@ -408,6 +408,8 @@ h3{font-size:1.25rem}
   .wf-timeline__track,.wf-timeline__playhead{animation:none}
   .wf-caption-line--1,.wf-caption-line--2{animation:none;opacity:1;transform:none}
   .wf-phone__views{animation:none;opacity:1;transform:none}
+  .nav__link--highlight{animation:none}
+  .nav__cta{animation:none}
 }
 
 /* ===== SEARCH BAR ===== */
@@ -870,7 +872,7 @@ h3{font-size:1.25rem}
 }
 .tool-card:hover{box-shadow:var(--shadow);border-color:var(--gray-300)}
 .tool-card--featured{border:2px solid var(--navy);box-shadow:0 4px 16px rgba(26,35,66,.12);position:relative}
-.tool-card--featured::after{content:"Partner";position:absolute;top:12px;right:12px;background:var(--navy);color:#fff;font-size:0.6875rem;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:0.03em}
+.tool-card--featured::after{content:"Sponsored";position:absolute;top:12px;right:12px;background:var(--navy);color:#fff;font-size:0.6875rem;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:0.03em}
 .tool-card--featured .tool-card__icon{background:var(--navy);color:#fff}
 .tool-card__header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .tool-card__icon{
