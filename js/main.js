@@ -109,3 +109,64 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ===== GA4 EVENT TRACKING =====
+function trackEvent(name, params) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
+// --- Affiliate clicks (delegated) ---
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[data-affiliate-vendor]');
+  if (!link) return;
+  trackEvent('affiliate_click', {
+    affiliate_vendor: link.dataset.affiliateVendor,
+    affiliate_placement: link.dataset.affiliatePlacement,
+    affiliate_featured: link.closest('.tool-card--featured') ? true : false
+  });
+});
+
+// --- Search events ---
+document.querySelectorAll('.search-bar').forEach(function(bar) {
+  var input = bar.querySelector('input');
+  if (!input) return;
+  function trackSearch() {
+    var q = input.value.trim();
+    if (!q) return;
+    trackEvent('search', { search_term: q });
+  }
+  var btn = bar.querySelector('.btn');
+  if (btn) btn.addEventListener('click', trackSearch);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') trackSearch();
+  });
+});
+
+// --- Filter usage ---
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    trackEvent('directory_filter', {
+      filter_value: btn.dataset.filter || btn.textContent.trim()
+    });
+  });
+});
+
+// --- Modal opens ---
+document.querySelectorAll('[data-modal]').forEach(function(trigger) {
+  trigger.addEventListener('click', function() {
+    trackEvent('modal_open', { modal_id: trigger.dataset.modal });
+  });
+});
+
+// --- CTA clicks (nav CTAs and banner CTAs) ---
+document.addEventListener('click', function(e) {
+  var cta = e.target.closest('.nav__cta, .cta-banner .btn, .hero .btn');
+  if (!cta) return;
+  if (cta.dataset.affiliateVendor) return;
+  trackEvent('cta_click', {
+    cta_name: cta.textContent.trim().substring(0, 50),
+    cta_location: cta.closest('.nav') ? 'nav' : cta.closest('.cta-banner') ? 'cta_banner' : cta.closest('.hero') ? 'hero' : 'other'
+  });
+});
