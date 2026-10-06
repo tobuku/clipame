@@ -528,6 +528,7 @@
         </div>
         <form class="newsletter__form" action="https://formspree.io/f/mkoldeja" method="POST">
           <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+          <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
           <input type="email" name="email" placeholder="you@example.com" required>
           <button type="submit" class="btn btn--white">Subscribe</button>
         </form>
@@ -560,6 +561,7 @@
           <div class="footer__newsletter">
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+              <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
               <input type="email" name="email" placeholder="Your email" required>
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
@@ -609,6 +611,7 @@
         <button class="modal__close">&times;</button>
       </div>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
+        <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=listing">
         <div class="form-group">
           <label>I am a...</label>
           <select class="form-select" name="type" required>

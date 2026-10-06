@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVYJRDK6JZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVYJRDK6JZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Submission Received | Clipame</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/images/favicon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
+      <nav class="nav">
+        <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="tools.html" class="nav__link">Tools</a>
+        <a href="communities.html" class="nav__link">Communities</a>
+        <a href="jobs.html" class="nav__link">Jobs</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:60vh;display:flex;align-items:center;">
+    <div class="container text-center">
+      <h1 style="color:var(--white);margin-bottom:16px;">Thanks, your submission was received.</h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.125rem;margin-bottom:32px;">You're all set.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" class="btn btn--white">Back to Clipame</a>
+        <a href="clippers.html" class="btn btn--ghost">Browse Clippers</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
+          <p>A video editor directory for the clipping industry.</p>
+        </div>
+        <div><h4>Directory</h4><ul><li><a href="clippers.html">Clippers</a></li><li><a href="agencies.html">Agencies</a></li><li><a href="tools.html">Tools</a></li><li><a href="communities.html">Communities</a></li><li><a href="jobs.html">Jobs</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="how-to-become-a-clipper.html">How to Become a Clipper</a></li><li><a href="best-clipping-agencies.html">Best Clipping Agencies</a></li><li><a href="best-ai-clipping-tools.html">Best AI Clipping Tools</a></li><li><a href="best-clipper-communities.html">Best Clipper Communities</a></li><li><a href="about.html">About</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div><h4>For Professionals</h4><ul><li><a href="index.html#submit">List Your Profile</a></li><li><a href="jobs.html">Post a Job</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Clipame. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var ALLOWED = {newsletter:1, listing:1, job:1, contact:1, campaign:1, lead:1};
+      var TYPES = {
+        newsletter: {form_name:'newsletter', lead_type:'newsletter'},
+        listing: {form_name:'directory_submission', lead_type:'directory_submission'},
+        job: {form_name:'job_post', lead_type:'job_post'},
+        contact: {form_name:'contact', lead_type:'contact_request'},
+        campaign: {form_name:'campaign', lead_type:'campaign_request'},
+        lead: {form_name:'clipper_lead', lead_type:'clipper_lead'}
+      };
+
+      var params = new URLSearchParams(location.search);
+      var type = params.get('type');
+      if (type && !ALLOWED[type]) type = null;
+
+      var key = 'clipame_lead_' + (type || 'generic');
+      try {
+        if (sessionStorage.getItem(key)) return;
+        sessionStorage.setItem(key, '1');
+      } catch(e) {}
+
+      var eventParams = {};
+      if (type && TYPES[type]) {
+        eventParams.form_name = TYPES[type].form_name;
+        eventParams.lead_type = TYPES[type].lead_type;
+      }
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', eventParams);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -79,6 +79,7 @@
 
         <form action="https://formspree.io/f/mkoldeja" method="POST" id="campaignForm">
           <input type="hidden" name="_subject" value="New Clipame Campaign Submission">
+          <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=campaign">
 
           <!-- STEP 1: Basic Info -->
           <div class="campaign-panel active" data-panel="1">
@@ -357,6 +358,7 @@ Example:
           <div class="footer__newsletter">
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
+              <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
               <input type="email" name="email" placeholder="Your email" required>
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
