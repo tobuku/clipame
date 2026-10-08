@@ -236,12 +236,13 @@
   </script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ===== HEADER ===== -->
 <header class="header">
   <div class="container header__inner">
     <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-    <nav class="nav">
+    <nav class="nav" id="main-nav">
       <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
       <a href="agencies.html" class="nav__link">Agencies</a>
       <a href="tools.html" class="nav__link">Tools</a>
@@ -250,18 +251,18 @@
       <a href="about.html" class="nav__link">About</a>
       <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta">Get Listed</a>
     </nav>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <!-- ===== LAYER 1: PAGE HEADER ===== -->
-<section class="listicle-header">
+<section class="listicle-header" id="main-content">
   <div class="container">
-    <div class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a> <span>/</span>
       <a href="communities.html">Communities</a> <span>/</span>
       <span>Best Communities for New Clippers</span>
-    </div>
+    </nav>
     <h1>5 Best Communities for New Clippers in 2026</h1>
     <p class="subtitle">Community is everything when you are learning to clip. The right group gives you campaign drops, editing feedback, and connections that fast-track your career. We reviewed dozens of communities so you do not have to.</p>
     <p class="author-line">By <strong>Clipame editorial team</strong> / Last updated July 10, 2026</p>
@@ -694,7 +695,7 @@
           <form action="https://formspree.io/f/mkoldeja" method="POST">
             <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
             <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-            <input type="email" name="email" placeholder="Your email" required>
+            <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
             <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
           </form>
         </div>

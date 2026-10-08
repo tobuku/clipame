@@ -542,12 +542,13 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -556,18 +557,18 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta">Get Listed</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <!-- LAYER 1: Page Header -->
-  <section class="listicle-header">
+  <section class="listicle-header" id="main-content">
     <div class="container">
-      <div class="breadcrumb" style="justify-content:center;color:rgba(255,255,255,0.4);margin-bottom:20px;">
+      <nav class="breadcrumb" aria-label="Breadcrumb" style="justify-content:center;color:rgba(255,255,255,0.4);margin-bottom:20px;">
         <a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a>
         <span>/</span>
         <span style="color:rgba(255,255,255,0.7);">How to Become a Clipper</span>
-      </div>
+      </nav>
       <h1>How to Become a Social Media Clipper in 2026</h1>
       <p class="subtitle">The complete step-by-step guide to launching your clipping career. Clippers earn $500 to $5,000+ per month turning long-form content into viral short-form clips for creators, brands, and agencies.</p>
       <p class="author-line">By Clipame editorial team / Last updated July 10, 2026</p>
@@ -1023,7 +1024,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>

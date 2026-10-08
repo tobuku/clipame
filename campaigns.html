@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -45,13 +46,13 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="campaigns.html" class="btn btn--primary btn--sm nav__cta">Create Campaign</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header">
+  <section class="page-header" id="main-content">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Create Campaign</span></div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Create Campaign</span></nav>
       <h1>Create a Clipping Campaign</h1>
       <p>Set your budget, define your brief, and connect with clippers who will distribute your content across TikTok, Reels, and Shorts.</p>
     </div>
@@ -87,30 +88,30 @@
             <p style="color:var(--gray-500);margin-bottom:24px;">Tell us about your campaign so clippers know what to expect.</p>
 
             <div class="form-group">
-              <label>Campaign Name</label>
-              <input type="text" class="form-input" name="campaign_name" required placeholder="e.g. Summer Product Launch" maxlength="50">
+              <label for="campaign-name">Campaign Name</label>
+              <input type="text" class="form-input" name="campaign_name" id="campaign-name" required placeholder="e.g. Summer Product Launch" maxlength="50">
               <small style="color:var(--gray-400);font-size:0.75rem;">Max 50 characters</small>
             </div>
 
             <div class="field-row">
               <div class="form-group">
-                <label>Your Name / Company</label>
-                <input type="text" class="form-input" name="company" required placeholder="Company or creator name">
+                <label for="campaign-contact-name">Your Name / Company</label>
+                <input type="text" class="form-input" name="company" id="campaign-contact-name" required placeholder="Company or creator name">
               </div>
               <div class="form-group">
-                <label>Email</label>
-                <input type="email" class="form-input" name="email" required placeholder="you@example.com">
+                <label for="campaign-email">Email</label>
+                <input type="email" class="form-input" name="email" id="campaign-email" required placeholder="you@example.com">
               </div>
             </div>
 
             <div class="form-group">
-              <label>Website (optional)</label>
-              <input type="url" class="form-input" name="website" placeholder="https://...">
+              <label for="campaign-website">Website (optional)</label>
+              <input type="url" class="form-input" name="website" id="campaign-website" placeholder="https://...">
             </div>
 
             <div class="form-group">
-              <label>Content Language</label>
-              <select class="form-select" name="language">
+              <label for="campaign-language">Content Language</label>
+              <select class="form-select" name="language" id="campaign-language">
                 <option>English</option>
                 <option>Spanish</option>
                 <option>Portuguese</option>
@@ -131,8 +132,8 @@
             </div>
 
             <div class="form-group">
-              <label>Content Niche</label>
-              <select class="form-select" name="niche">
+              <label for="campaign-niche">Content Niche</label>
+              <select class="form-select" name="niche" id="campaign-niche">
                 <option value="">Select a niche</option>
                 <option>Podcast</option>
                 <option>Gaming</option>
@@ -161,19 +162,19 @@
 
             <div class="field-row">
               <div class="form-group">
-                <label>Start Date</label>
-                <input type="date" class="form-input" name="start_date" required>
+                <label for="campaign-start-date">Start Date</label>
+                <input type="date" class="form-input" name="start_date" id="campaign-start-date" required>
               </div>
               <div class="form-group">
-                <label>End Date</label>
-                <input type="date" class="form-input" name="end_date" required>
+                <label for="campaign-end-date">End Date</label>
+                <input type="date" class="form-input" name="end_date" id="campaign-end-date" required>
               </div>
             </div>
 
             <div class="field-row">
               <div class="form-group">
-                <label>CPM Rate ($ per 1,000 views)</label>
-                <select class="form-select" name="cpm" id="cpmSelect">
+                <label for="campaign-cpm">CPM Rate ($ per 1,000 views)</label>
+                <select class="form-select" name="cpm" id="campaign-cpm">
                   <option value="0.50">$0.50</option>
                   <option value="1.00">$1.00</option>
                   <option value="1.50" selected>$1.50</option>
@@ -185,8 +186,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Total Budget ($)</label>
-                <input type="number" class="form-input" name="budget" id="budgetInput" required placeholder="e.g. 5000" min="100" step="100">
+                <label for="campaign-budget">Total Budget ($)</label>
+                <input type="number" class="form-input" name="budget" id="campaign-budget" required placeholder="e.g. 5000" min="100" step="100">
               </div>
             </div>
 
@@ -203,8 +204,8 @@
             </div>
 
             <div class="form-group">
-              <label>Payment Model</label>
-              <select class="form-select" name="payment_model">
+              <label for="campaign-payment-model">Payment Model</label>
+              <select class="form-select" name="payment_model" id="campaign-payment-model">
                 <option>CPM (Pay per 1,000 views)</option>
                 <option>Fixed rate per clip</option>
                 <option>Revenue share</option>
@@ -225,8 +226,8 @@
             <p style="color:var(--gray-500);margin-bottom:24px;">Provide guidelines for clippers to follow when creating and distributing your content.</p>
 
             <div class="form-group">
-              <label>Paid Partnership Disclosure</label>
-              <select class="form-select" name="disclosure">
+              <label for="campaign-disclosure">Paid Partnership Disclosure</label>
+              <select class="form-select" name="disclosure" id="campaign-disclosure">
                 <option>Hashtag (#ad, #sponsored, #paidpartnership)</option>
                 <option>Native platform paid partnership label</option>
                 <option>Both hashtag and native label</option>
@@ -235,19 +236,19 @@
             </div>
 
             <div class="form-group">
-              <label>Disclosure Hashtag (if applicable)</label>
-              <input type="text" class="form-input" name="disclosure_hashtag" placeholder="#paidpartnership" maxlength="45">
+              <label for="campaign-hashtag">Disclosure Hashtag (if applicable)</label>
+              <input type="text" class="form-input" name="disclosure_hashtag" id="campaign-hashtag" placeholder="#paidpartnership" maxlength="45">
             </div>
 
             <div class="form-group">
-              <label>Required Caption / Hashtags (optional)</label>
-              <input type="text" class="form-input" name="required_caption" placeholder="e.g. #YourBrand @youraccount">
+              <label for="campaign-captions">Required Caption / Hashtags (optional)</label>
+              <input type="text" class="form-input" name="required_caption" id="campaign-captions" placeholder="e.g. #YourBrand @youraccount">
             </div>
 
             <div class="field-row">
               <div class="form-group">
-                <label>Minimum Video Length</label>
-                <select class="form-select" name="min_length">
+                <label for="campaign-min-length">Minimum Video Length</label>
+                <select class="form-select" name="min_length" id="campaign-min-length">
                   <option value="">No minimum</option>
                   <option>15 seconds</option>
                   <option>30 seconds</option>
@@ -257,8 +258,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Maximum Video Length</label>
-                <select class="form-select" name="max_length">
+                <label for="campaign-max-length">Maximum Video Length</label>
+                <select class="form-select" name="max_length" id="campaign-max-length">
                   <option value="">No maximum</option>
                   <option>30 seconds</option>
                   <option>60 seconds</option>
@@ -269,13 +270,13 @@
             </div>
 
             <div class="form-group">
-              <label>Audio / Sound (optional)</label>
-              <input type="text" class="form-input" name="audio_link" placeholder="Link to TikTok or IG audio (optional)">
+              <label for="campaign-audio">Audio / Sound (optional)</label>
+              <input type="text" class="form-input" name="audio_link" id="campaign-audio" placeholder="Link to TikTok or IG audio (optional)">
             </div>
 
             <div class="form-group">
-              <label>Campaign Brief</label>
-              <textarea class="form-textarea" name="brief" rows="8" placeholder="Describe your campaign with instructions, brand guidelines, helpful tips, links, and notes. Include any source content URLs (YouTube, podcast links, etc.) that clippers should use.
+              <label for="campaign-brief">Campaign Brief</label>
+              <textarea class="form-textarea" name="brief" id="campaign-brief" rows="8" placeholder="Describe your campaign with instructions, brand guidelines, helpful tips, links, and notes. Include any source content URLs (YouTube, podcast links, etc.) that clippers should use.
 
 Example:
 - We're launching a fitness app and want clippers to create engaging shorts from our podcast episodes
@@ -286,8 +287,8 @@ Example:
             </div>
 
             <div class="form-group">
-              <label>Source Content Links (optional)</label>
-              <textarea class="form-textarea" name="source_links" rows="3" placeholder="Paste links to YouTube videos, podcast episodes, or other source content (one per line)" style="min-height:80px"></textarea>
+              <label for="campaign-source-links">Source Content Links (optional)</label>
+              <textarea class="form-textarea" name="source_links" id="campaign-source-links" rows="3" placeholder="Paste links to YouTube videos, podcast episodes, or other source content (one per line)" style="min-height:80px"></textarea>
             </div>
 
             <div class="campaign-nav">
@@ -359,7 +360,7 @@ Example:
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>
@@ -395,8 +396,8 @@ Example:
     }
 
     // Budget estimator
-    const cpmSelect = document.getElementById('cpmSelect');
-    const budgetInput = document.getElementById('budgetInput');
+    const cpmSelect = document.getElementById('campaign-cpm');
+    const budgetInput = document.getElementById('campaign-budget');
     function updateEstimate() {
       const cpm = parseFloat(cpmSelect.value);
       const budget = parseFloat(budgetInput.value);

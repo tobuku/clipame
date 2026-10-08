@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--active nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -45,19 +46,19 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List Your Profile</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header page-header--hero">
+  <section class="page-header page-header--hero" id="main-content">
     <div class="container">
-      <div class="breadcrumb">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>Clippers</span>
-      </div>
+      </nav>
       <h1>Video Editors for Hire</h1>
       <p>Browse freelance video editors, short-form specialists, and clipping professionals available for hire.</p>
       <div class="search-bar mt-24" style="max-width:560px;">
-        <input type="text" placeholder="Search by name, specialty, or location...">
+        <input type="text" placeholder="Search by name, specialty, or location..." aria-label="Search clippers by name, specialty, or location">
         <button class="btn btn--primary btn--sm">Search</button>
       </div>
     </div>
@@ -1871,7 +1872,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>
@@ -1912,19 +1913,19 @@
   </footer>
 
   <!-- SUBMIT MODAL (Get Listed) -->
-  <div class="modal-overlay" id="submitModal">
+  <div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitModalTitle" aria-hidden="true">
     <div class="modal">
       <div class="modal__header">
-        <h3>Get Listed on Clipame</h3>
-        <button class="modal__close">&times;</button>
+        <h3 id="submitModalTitle">Get Listed on Clipame</h3>
+        <button class="modal__close" aria-label="Close">&times;</button>
       </div>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
         <input type="hidden" name="_subject" value="New Clipper Listing Request">
         <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=listing">
         <input type="hidden" name="form_type" value="listing_request">
         <div class="form-group">
-          <label>I am a...</label>
-          <select class="form-select" name="type" required>
+          <label for="submit-type">I am a...</label>
+          <select class="form-select" name="type" id="submit-type" required>
             <option value="">Select one</option>
             <option value="clipper" selected>Clipper / Editor</option>
             <option value="agency">Agency / Company</option>
@@ -1932,20 +1933,20 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Name</label>
-          <input type="text" class="form-input" name="name" required placeholder="Your name">
+          <label for="submit-name">Name</label>
+          <input type="text" class="form-input" name="name" id="submit-name" required placeholder="Your name">
         </div>
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-input" name="email" required placeholder="you@example.com">
+          <label for="submit-email">Email</label>
+          <input type="email" class="form-input" name="email" id="submit-email" required placeholder="you@example.com">
         </div>
         <div class="form-group">
-          <label>TikTok, YouTube, or IG URL</label>
-          <input type="url" class="form-input" name="website" placeholder="https://...">
+          <label for="submit-url">TikTok, YouTube, or IG URL</label>
+          <input type="url" class="form-input" name="website" id="submit-url" placeholder="https://...">
         </div>
         <div class="form-group">
-          <label>Specialties &amp; Experience</label>
-          <textarea class="form-textarea" name="description" placeholder="Niches, tools, platforms, total views..."></textarea>
+          <label for="submit-desc">Specialties &amp; Experience</label>
+          <textarea class="form-textarea" name="description" id="submit-desc" placeholder="Niches, tools, platforms, total views..."></textarea>
         </div>
         <button type="submit" class="btn btn--primary" style="width:100%">Submit Listing Request</button>
       </form>
@@ -1953,11 +1954,11 @@
   </div>
 
   <!-- CONTACT CLIPPER MODAL (Lead Form) -->
-  <div class="modal-overlay" id="contactModal">
+  <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" aria-hidden="true">
     <div class="modal">
       <div class="modal__header">
-        <h3>Contact <span id="contactClipperName"></span></h3>
-        <button class="modal__close">&times;</button>
+        <h3 id="contactModalTitle">Contact <span id="contactClipperName"></span></h3>
+        <button class="modal__close" aria-label="Close">&times;</button>
       </div>
       <p style="font-size:0.875rem;color:var(--gray-500);margin-bottom:16px;">Submit your project details and we'll connect you with this clipper.</p>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
@@ -1967,20 +1968,20 @@
         <input type="hidden" name="clipper_id" id="contactClipperId" value="">
         <input type="hidden" name="clipper_name" id="contactClipperNameField" value="">
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" class="form-input" name="buyer_name" required placeholder="Your name">
+          <label for="contact-name">Your Name</label>
+          <input type="text" class="form-input" name="buyer_name" id="contact-name" required placeholder="Your name">
         </div>
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-input" name="buyer_email" required placeholder="you@example.com">
+          <label for="contact-email">Email</label>
+          <input type="email" class="form-input" name="buyer_email" id="contact-email" required placeholder="you@example.com">
         </div>
         <div class="form-group">
-          <label>Company / Channel</label>
-          <input type="text" class="form-input" name="buyer_company" placeholder="Your company or channel name">
+          <label for="contact-company">Company / Channel</label>
+          <input type="text" class="form-input" name="buyer_company" id="contact-company" placeholder="Your company or channel name">
         </div>
         <div class="form-group">
-          <label>Project Type</label>
-          <select class="form-select" name="project_type" required>
+          <label for="contact-project-type">Project Type</label>
+          <select class="form-select" name="project_type" id="contact-project-type" required>
             <option value="">Select one</option>
             <option value="podcast_clipping">Podcast Clipping</option>
             <option value="short_form_editing">Short-Form Video Editing</option>
@@ -1991,8 +1992,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Budget Range</label>
-          <select class="form-select" name="budget_range">
+          <label for="contact-budget">Budget Range</label>
+          <select class="form-select" name="budget_range" id="contact-budget">
             <option value="">Select one (optional)</option>
             <option value="under_100">Under $100</option>
             <option value="100_500">$100 - $500</option>
@@ -2001,8 +2002,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Project Details</label>
-          <textarea class="form-textarea" name="project_description" required placeholder="Describe your project, platforms needed, timeline..."></textarea>
+          <label for="contact-details">Project Details</label>
+          <textarea class="form-textarea" name="project_description" id="contact-details" required placeholder="Describe your project, platforms needed, timeline..."></textarea>
         </div>
         <button type="submit" class="btn btn--primary" style="width:100%">Send to Clipper</button>
       </form>

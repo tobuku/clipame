@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link nav__link--active">Tools</a>
@@ -45,17 +46,17 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List a Tool</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header">
+  <section class="page-header" id="main-content">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Tools</span></div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Tools</span></nav>
       <h1>Software &amp; Tools</h1>
       <p>AI clipping software, editing tools, caption generators, analytics, and more.</p>
       <div class="search-bar mt-24" style="max-width:560px;">
-        <input type="text" placeholder="Search by tool name, category, or feature...">
+        <input type="text" placeholder="Search by tool name, category, or feature..." aria-label="Search by tool name, category, or feature">
         <button class="btn btn--primary btn--sm">Search</button>
       </div>
     </div>
@@ -354,7 +355,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>
@@ -369,16 +370,16 @@
     </div>
   </footer>
 
-  <div class="modal-overlay" id="submitModal">
+  <div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="submitModalTitle">
     <div class="modal">
-      <div class="modal__header"><h3>List Your Tool</h3><button class="modal__close">&times;</button></div>
+      <div class="modal__header"><h3 id="submitModalTitle">List Your Tool</h3><button class="modal__close" aria-label="Close">&times;</button></div>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
         <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=listing">
-        <div class="form-group"><label>Tool Name</label><input type="text" class="form-input" name="name" required></div>
-        <div class="form-group"><label>Website</label><input type="url" class="form-input" name="website" required></div>
-        <div class="form-group"><label>Email</label><input type="email" class="form-input" name="email" required></div>
-        <div class="form-group"><label>Category</label><select class="form-select" name="type"><option>AI Clipping</option><option>Video Editing</option><option>Captions</option><option>Analytics</option><option>Scheduling</option><option>Thumbnails</option></select></div>
-        <div class="form-group"><label>Description</label><textarea class="form-textarea" name="description" placeholder="Features, pricing, what makes it useful for clippers..."></textarea></div>
+        <div class="form-group"><label for="tool-name">Tool Name</label><input type="text" class="form-input" name="name" id="tool-name" required></div>
+        <div class="form-group"><label for="tool-website">Website</label><input type="url" class="form-input" name="website" id="tool-website" required></div>
+        <div class="form-group"><label for="tool-email">Email</label><input type="email" class="form-input" name="email" id="tool-email" required></div>
+        <div class="form-group"><label for="tool-category">Category</label><select class="form-select" name="type" id="tool-category"><option>AI Clipping</option><option>Video Editing</option><option>Captions</option><option>Analytics</option><option>Scheduling</option><option>Thumbnails</option></select></div>
+        <div class="form-group"><label for="tool-description">Description</label><textarea class="form-textarea" name="description" id="tool-description" placeholder="Features, pricing, what makes it useful for clippers..."></textarea></div>
         <button type="submit" class="btn btn--primary" style="width:100%">Submit Tool Listing</button>
       </form>
     </div>

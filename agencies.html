@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link nav__link--active">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -45,19 +46,19 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List Your Agency</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header">
+  <section class="page-header" id="main-content">
     <div class="container">
-      <div class="breadcrumb">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>Agencies</span>
-      </div>
+      </nav>
       <h1>Agency Directory</h1>
       <p>Clipping agencies, distribution networks, and creator management companies.</p>
       <div class="search-bar mt-24" style="max-width:560px;">
-        <input type="text" placeholder="Search by agency name, type, or service...">
+        <input type="text" placeholder="Search by agency name, type, or service..." aria-label="Search by agency name, type, or service">
         <button class="btn btn--primary btn--sm">Search</button>
       </div>
     </div>
@@ -258,7 +259,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>
@@ -273,16 +274,16 @@
     </div>
   </footer>
 
-  <div class="modal-overlay" id="submitModal">
+  <div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="submitModalTitle">
     <div class="modal">
-      <div class="modal__header"><h3>List Your Agency</h3><button class="modal__close">&times;</button></div>
+      <div class="modal__header"><h3 id="submitModalTitle">List Your Agency</h3><button class="modal__close" aria-label="Close">&times;</button></div>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
         <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=listing">
-        <div class="form-group"><label>Company Name</label><input type="text" class="form-input" name="name" required></div>
-        <div class="form-group"><label>Website</label><input type="url" class="form-input" name="website" required></div>
-        <div class="form-group"><label>Email</label><input type="email" class="form-input" name="email" required></div>
-        <div class="form-group"><label>Type</label><select class="form-select" name="type"><option>Full-Service Agency</option><option>Marketplace</option><option>Distribution Network</option><option>Platform</option></select></div>
-        <div class="form-group"><label>Description</label><textarea class="form-textarea" name="description" placeholder="Services, team size, pricing model..."></textarea></div>
+        <div class="form-group"><label for="agency-name">Company Name</label><input type="text" class="form-input" name="name" id="agency-name" required></div>
+        <div class="form-group"><label for="agency-website">Website</label><input type="url" class="form-input" name="website" id="agency-website" required></div>
+        <div class="form-group"><label for="agency-email">Email</label><input type="email" class="form-input" name="email" id="agency-email" required></div>
+        <div class="form-group"><label for="agency-type">Type</label><select class="form-select" name="type" id="agency-type"><option>Full-Service Agency</option><option>Marketplace</option><option>Distribution Network</option><option>Platform</option></select></div>
+        <div class="form-group"><label for="agency-description">Description</label><textarea class="form-textarea" name="description" id="agency-description" placeholder="Services, team size, pricing model..."></textarea></div>
         <button type="submit" class="btn btn--primary" style="width:100%">Submit Agency Listing</button>
       </form>
     </div>

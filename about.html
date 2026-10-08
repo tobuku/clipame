@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -45,12 +46,12 @@
         <a href="about.html" class="nav__link nav__link--active">About</a>
         <a href="index.html#submit" class="btn btn--primary btn--sm nav__cta">Get Listed</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <!-- ABOUT HERO -->
-  <section class="hero" style="padding:140px 0 80px;">
+  <section class="hero" id="main-content" style="padding:140px 0 80px;">
     <div class="container">
       <div class="hero__content" style="max-width:640px;">
         <p class="label">About Clipame</p>
@@ -191,10 +192,10 @@
       </div>
       <form action="https://formspree.io/f/mkoldeja" method="POST" style="background:var(--white);padding:32px;border-radius:var(--radius-lg);border:1px solid var(--gray-200);">
         <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=contact">
-        <div class="form-group"><label>Name</label><input type="text" class="form-input" name="name" required></div>
-        <div class="form-group"><label>Email</label><input type="email" class="form-input" name="email" required></div>
-        <div class="form-group"><label>Subject</label><select class="form-select" name="subject"><option>General Inquiry</option><option>Listing Request</option><option>Partnership</option><option>Press / Media</option><option>Bug Report</option></select></div>
-        <div class="form-group"><label>Message</label><textarea class="form-textarea" name="message" required placeholder="How can we help?"></textarea></div>
+        <div class="form-group"><label for="contact-name">Name</label><input type="text" class="form-input" name="name" id="contact-name" required></div>
+        <div class="form-group"><label for="contact-email">Email</label><input type="email" class="form-input" name="email" id="contact-email" required></div>
+        <div class="form-group"><label for="contact-subject">Subject</label><select class="form-select" name="subject" id="contact-subject"><option>General Inquiry</option><option>Listing Request</option><option>Partnership</option><option>Press / Media</option><option>Bug Report</option></select></div>
+        <div class="form-group"><label for="contact-message">Message</label><textarea class="form-textarea" name="message" id="contact-message" required placeholder="How can we help?"></textarea></div>
         <button type="submit" class="btn btn--primary" style="width:100%">Send Message</button>
       </form>
     </div>
@@ -210,7 +211,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>

@@ -11,13 +11,15 @@ const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 if (hamburger && nav) {
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+    const isOpen = hamburger.classList.toggle('active');
     nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
   });
   nav.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       nav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 }
@@ -26,8 +28,10 @@ if (hamburger && nav) {
 document.querySelectorAll('.filter-bar').forEach(bar => {
   bar.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
+      bar.querySelectorAll('.filter-btn').forEach(b => b.setAttribute('aria-pressed', 'false'));
       bar.querySelector('.filter-btn.active')?.classList.remove('active');
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       const filter = btn.dataset.filter;
       const grid = bar.nextElementSibling;
       if (!grid) return;
@@ -85,18 +89,63 @@ document.querySelectorAll('.search-bar').forEach(bar => {
 })();
 
 // ===== MODAL HANDLING =====
+let lastFocusedElement = null;
+
+function openModal(overlay) {
+  if (!overlay) return;
+  lastFocusedElement = document.activeElement;
+  overlay.classList.add('active');
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  const firstInput = overlay.querySelector('input, select, textarea, button');
+  if (firstInput) firstInput.focus();
+}
+
+function closeModal(overlay) {
+  if (!overlay) return;
+  overlay.classList.remove('active');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lastFocusedElement) lastFocusedElement.focus();
+}
+
 document.querySelectorAll('[data-modal]').forEach(trigger => {
   trigger.addEventListener('click', () => {
-    const modal = document.querySelector(trigger.dataset.modal);
-    if (modal) modal.classList.add('active');
+    openModal(document.querySelector(trigger.dataset.modal));
   });
 });
 document.querySelectorAll('.modal__close, .modal-overlay').forEach(el => {
   el.addEventListener('click', e => {
     if (e.target === el) {
-      el.closest('.modal-overlay')?.classList.remove('active');
+      closeModal(el.closest('.modal-overlay'));
     }
   });
+});
+
+// Escape key closes modal
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const active = document.querySelector('.modal-overlay.active');
+    if (active) closeModal(active);
+  }
+});
+
+// Focus trap inside modal
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const active = document.querySelector('.modal-overlay.active');
+  if (!active) return;
+  const focusable = active.querySelectorAll('input, select, textarea, button, a[href], [tabindex]:not([tabindex="-1"])');
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
 });
 
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====

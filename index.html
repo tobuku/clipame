@@ -33,12 +33,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -47,21 +48,21 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="#submit" class="btn btn--primary btn--sm nav__cta" data-modal="#submitModal">List Your Profile</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero hero--split">
+  <section class="hero hero--split" id="main-content">
     <div class="container hero__grid">
       <div class="hero__content">
         <p class="label">The Clipping Industry Directory</p>
         <h1>Find a video editor for hire.</h1>
         <p class="hero__tagline">Clipame is where creators find freelance video editors, clipping agencies, and short-form specialists. The directory for the social media clipping economy.</p>
         <div class="search-bar mb-32">
-          <input type="text" placeholder="Search clippers, agencies, tools, jobs...">
+          <input type="text" placeholder="Search clippers, agencies, tools, jobs..." aria-label="Search clippers, agencies, tools, and jobs">
           <button class="btn btn--primary">Search</button>
         </div>
         <div class="hero__actions">
@@ -92,7 +93,7 @@
 
           <!-- Arrow down -->
           <div class="wf-arrow wf-step">
-            <svg width="24" height="32" viewBox="0 0 24 32"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
+            <svg width="24" height="32" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
             <span class="wf-arrow__label">AI finds viral moments</span>
           </div>
 
@@ -112,7 +113,7 @@
 
           <!-- Arrow down -->
           <div class="wf-arrow wf-step">
-            <svg width="24" height="32" viewBox="0 0 24 32"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
+            <svg width="24" height="32" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0v26m0 0l-8-8m8 8l8-8" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>
             <span class="wf-arrow__label">Distributed everywhere</span>
           </div>
 
@@ -529,7 +530,7 @@
         <form class="newsletter__form" action="https://formspree.io/f/mkoldeja" method="POST">
           <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
           <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-          <input type="email" name="email" placeholder="you@example.com" required>
+          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
           <button type="submit" class="btn btn--white">Subscribe</button>
         </form>
       </div>
@@ -562,7 +563,7 @@
             <form action="https://formspree.io/f/mkoldeja" method="POST">
               <input type="hidden" name="_subject" value="Clipame Newsletter Signup">
               <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=newsletter">
-              <input type="email" name="email" placeholder="Your email" required>
+              <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
               <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
             </form>
           </div>
@@ -604,17 +605,17 @@
   </footer>
 
   <!-- SUBMIT MODAL -->
-  <div class="modal-overlay" id="submitModal">
+  <div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitModalTitle" aria-hidden="true">
     <div class="modal">
       <div class="modal__header">
-        <h3>Get Listed on Clipame</h3>
-        <button class="modal__close">&times;</button>
+        <h3 id="submitModalTitle">Get Listed on Clipame</h3>
+        <button class="modal__close" aria-label="Close">&times;</button>
       </div>
       <form action="https://formspree.io/f/mkoldeja" method="POST">
         <input type="hidden" name="_next" value="https://clipame.com/thank-you.html?type=listing">
         <div class="form-group">
-          <label>I am a...</label>
-          <select class="form-select" name="type" required>
+          <label for="submit-type">I am a...</label>
+          <select class="form-select" name="type" id="submit-type" required>
             <option value="">Select one</option>
             <option value="clipper">Clipper / Editor</option>
             <option value="agency">Agency / Company</option>
@@ -624,20 +625,20 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Name / Company</label>
-          <input type="text" class="form-input" name="name" required placeholder="Your name or company name">
+          <label for="submit-name">Name / Company</label>
+          <input type="text" class="form-input" name="name" id="submit-name" required placeholder="Your name or company name">
         </div>
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-input" name="email" required placeholder="you@example.com">
+          <label for="submit-email">Email</label>
+          <input type="email" class="form-input" name="email" id="submit-email" required placeholder="you@example.com">
         </div>
         <div class="form-group">
-          <label>TikTok, YouTube, or IG URL</label>
-          <input type="url" class="form-input" name="website" placeholder="https://...">
+          <label for="submit-url">TikTok, YouTube, or IG URL</label>
+          <input type="url" class="form-input" name="website" id="submit-url" placeholder="https://...">
         </div>
         <div class="form-group">
-          <label>Tell us about yourself</label>
-          <textarea class="form-textarea" name="description" placeholder="Specialties, experience, platforms you work with..."></textarea>
+          <label for="submit-desc">Tell us about yourself</label>
+          <textarea class="form-textarea" name="description" id="submit-desc" placeholder="Specialties, experience, platforms you work with..."></textarea>
         </div>
         <button type="submit" class="btn btn--primary" style="width:100%">Submit Listing Request</button>
       </form>

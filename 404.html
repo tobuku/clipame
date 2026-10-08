@@ -21,11 +21,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo"><img src="images/clipame-logo-2d.jpg" alt="Clipame.com" width="234" height="200"></a>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="clippers.html" class="nav__link nav__link--highlight">Clippers</a>
         <a href="agencies.html" class="nav__link">Agencies</a>
         <a href="tools.html" class="nav__link">Tools</a>
@@ -33,11 +34,11 @@
         <a href="jobs.html" class="nav__link">Jobs</a>
         <a href="about.html" class="nav__link">About</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="hero" style="min-height:70vh;display:flex;align-items:center;">
+  <section class="hero" id="main-content" style="min-height:70vh;display:flex;align-items:center;">
     <div class="container text-center">
       <h1 style="font-size:6rem;color:rgba(255,255,255,0.2);margin-bottom:0;">404</h1>
       <h2 style="color:var(--white);margin-bottom:16px;">Page Not Found</h2>
