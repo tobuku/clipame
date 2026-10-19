@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*-old.html
 
 Sitemap: https://clipame.com/sitemap.xml
