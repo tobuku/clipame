@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://clipame.com/clippers.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -363,6 +363,12 @@
   <url>
     <loc>https://clipame.com/clippers/cynthia-olamiposi.html</loc>
     <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://clipame.com/clippers/rishika-jain.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
